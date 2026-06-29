@@ -45,7 +45,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       color: '#F44336',
       timeAgo: '5 semanas atrás',
       stars: 5,
-      text: 'Excelente serviço! A instalação foi feita sem eu ter de fazer nada de técnico. O botão aparece exatamente como a lei exige — em 2 passos — e o e-mail de confirmação é enviado automaticamente. Perfeito.'
+      text: 'Excelente serviço! A instalação foi feita sem eu ter de fazer nada de técnico. O botão aparece exatamente como a lei exige (em 2 passos) e o e-mail de confirmação é enviado automaticamente. Perfeito.'
     },
     {
       name: 'Sofia P.',
