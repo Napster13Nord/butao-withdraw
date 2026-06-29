@@ -1,0 +1,8 @@
+# Agents & Skills
+.agents/
+skills-lock.json
+
+# Local tool configurations except templates
+.impeccable/critique/
+.impeccable/live/
+! .impeccable/design.json

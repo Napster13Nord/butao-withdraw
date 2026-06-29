@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-29T08:36:20Z",
+  "title": "Design System: Adequação Digital",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Compliance Blue", "canonical": "oklch(65% 0.2 250)", "tonalRamp": ["#08172e", "#0e2954", "#184284", "#245eb5", "#3b82f6", "#6ba4f9", "#9cc2fc", "#cde0fd"] },
+      "accent": { "role": "accent", "displayName": "Urgency Amber", "canonical": "oklch(76% 0.17 75)", "tonalRamp": ["#311f02", "#5c3d05", "#8c600b", "#bd8414", "#f59e0b", "#f8bf5c", "#fcdfa6", "#fef1d6"] },
+      "danger": { "role": "danger", "displayName": "Danger Red", "canonical": "oklch(58% 0.22 25)", "tonalRamp": ["#320909", "#5e1313", "#911f1f", "#c43030", "#ef4444", "#f47c7c", "#f8b3b3", "#fce9e9"] },
+      "success": { "role": "success", "displayName": "Success Green", "canonical": "oklch(72% 0.16 150)", "tonalRamp": ["#03251a", "#074a34", "#0b7352", "#0f9f72", "#10b981", "#48d1a4", "#8ce4c7", "#d1f6eb"] },
+      "neutral-bg": { "role": "neutral", "displayName": "Deep Void", "canonical": "oklch(14% 0.02 260)", "tonalRamp": ["#030509", "#060912", "#0a0e1a", "#151c33", "#222c4d", "#3b4975", "#6272a3", "#98a5cc"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only." },
+      "body": { "displayName": "Body", "purpose": "Prose, paragraphs, and list items." }
+    },
+    "shadows": [
+      { "name": "primary-glow", "value": "0 4px 20px rgba(59,130,246,0.25)", "purpose": "Highlight call-to-action buttons." }
+    ],
+    "motion": [
+      { "name": "transition-standard", "value": "0.3s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Transitions for hover and scale effects." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Large gradient button for main CTAs.",
+      "html": "<button class=\"ds-btn-primary\">Adequar Agora por 100€</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; border-radius: 12px; padding: 16px 32px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #ffffff; box-shadow: 0 4px 20px rgba(59,130,246,0.25); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.25); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary outline button for headers.",
+      "html": "<button class=\"ds-btn-outline\">Regularizar Loja</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.85rem; cursor: pointer; border-radius: 12px; padding: 10px 20px; background: transparent; color: #3b82f6; border: 1.5px solid rgba(59,130,246,0.4); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-outline:hover { background: rgba(59,130,246,0.1); border-color: #3b82f6; transform: translateY(-1px); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Compliance Shell",
+    "overview": "The Compliance Shell visual language evokes immediate security, legal authority, and technological peace of mind. Designed for WooCommerce store owners facing audits, the system pairs a cyber-security dark-indigo backdrop with vibrant primary indicators (tech-blue/purple gradients) and high-visibility warning indicators (amber and hazard-red).",
+    "keyCharacteristics": [
+      "Deep Indigo background (#0a0e1a) with crisp borders.",
+      "Cyber-security grade blue-violet gradients indicating modern technology.",
+      "Warning accents in amber (#f59e0b) to flag urgency and compliance failures.",
+      "Sharp contrast (>= 4.5:1) for all typography."
+    ],
+    "rules": [
+      { "name": "The Hazard Contrast Rule", "body": "Warning colors (Amber or Danger Red) are reserved for risk panels and urgency tags. Never use them as general branding or backgrounds.", "section": "colors" },
+      { "name": "The No-Faint-Text Rule", "body": "Body copy must maintain a contrast ratio of >= 4.5:1. Faint-gray body text on dark surfaces is strictly prohibited.", "section": "colors" },
+      { "name": "The Distinctive Pairing Rule", "body": "Pair Manrope (for geometric display titles) with Work Sans (for clean, highly readable body copy). Do not mix other sans-serif families.", "section": "typography" }
+    ],
+    "dos": [
+      "Do maintain a strict 12px border radius for buttons and inputs, and 20px for cards.",
+      "Do use OKLCH tints for gradients to keep them bright and prevent muddy mid-points.",
+      "Do test forms with screen readers and keyboard navigation (tabbing order)."
+    ],
+    "donts": [
+      "Don't use border-left / border-right greater than 1px as a colored accent stripe.",
+      "Don't use SaaS cream templates (#faf7f2 bg) for a cyber-security compliance product.",
+      "Don't let letter-spacing on display headers fall below -0.04em.",
+      "Don't pair a soft drop-shadow with a 1px border on the same resting element (use border only)."
+    ]
+  }
+}
