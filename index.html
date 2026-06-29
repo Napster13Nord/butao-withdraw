@@ -263,34 +263,33 @@
             </ul>
           </div>
         </div>
-        <div data-fs-success class="form-success-msg"></div>
-        <div data-fs-error class="form-error-msg"></div>
-        <form class="contact__form" id="lead-form">
+        <form
+          class="contact__form"
+          id="lead-form"
+          action="https://formspree.io/f/xkolzjow"
+          method="POST"
+        >
           <input type="hidden" name="plataforma" value="WooCommerce" />
           <div class="form-group">
             <label class="form-label" for="nome">Nome Completo <span class="form-required">*</span></label>
-            <input type="text" id="nome" name="nome" class="form-input" placeholder="O seu nome completo" required data-fs-field aria-describedby="nome-error" />
-            <span id="nome-error" data-fs-error="nome" class="form-field-error"></span>
+            <input type="text" id="nome" name="nome" class="form-input" placeholder="O seu nome completo" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="email">E-mail de Contacto <span class="form-required">*</span></label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="exemplo@email.com" required data-fs-field aria-describedby="email-error" />
-            <span id="email-error" data-fs-error="email" class="form-field-error"></span>
+            <input type="email" id="email" name="email" class="form-input" placeholder="exemplo@email.com" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="telemovel">Telemóvel / WhatsApp <span class="form-required">*</span></label>
             <div class="form-input-group">
               <span class="form-input-prefix">+351</span>
-              <input type="tel" id="telemovel" name="telemovel" class="form-input form-input--prefix" placeholder="912 345 678" required data-fs-field aria-describedby="telemovel-error" />
+              <input type="tel" id="telemovel" name="telemovel" class="form-input form-input--prefix" placeholder="912 345 678" required />
             </div>
-            <span id="telemovel-error" data-fs-error="telemovel" class="form-field-error"></span>
           </div>
           <div class="form-group">
             <label class="form-label" for="loja-link">Link da Loja <span class="form-required">*</span></label>
-            <input type="text" id="loja-link" name="loja-link" class="form-input" placeholder="https://minhaloja.pt ou minhaloja.pt" required data-fs-field aria-describedby="loja-link-error" />
-            <span class="form-error" id="loja-link-error" data-fs-error style="display:none"></span>
+            <input type="text" id="loja-link" name="loja-link" class="form-input" placeholder="https://minhaloja.pt ou minhaloja.pt" required />
           </div>
-          <button type="submit" class="btn btn--lg btn--primary btn--full" id="cta-submit" data-fs-submit-btn>
+          <button type="submit" class="btn btn--lg btn--primary btn--full" id="cta-submit">
             <span class="btn__text">Enviar Pedido de Adequação</span>
             <span class="btn__arrow">→</span>
           </button>
@@ -335,11 +334,6 @@
     </div>
   </div>
 
-  <script>
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#lead-form', formId: 'xkolzjow' });
-  </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="script.js"></script>
 </body>
 </html>
