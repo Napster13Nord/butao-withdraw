@@ -177,6 +177,103 @@ strong { font-weight: 600; color: var(--text); }
 }
 
 /* ============================================
+   REVIEWS MARQUEE
+   ============================================ */
+.reviews {
+  padding: 40px 0 60px;
+  overflow: hidden;
+}
+
+.reviews__marquee-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 10px 0 20px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.reviews__marquee-wrapper::-webkit-scrollbar { display: none; }
+
+.reviews__marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  padding: 0 5vw;
+}
+
+/* ── Card ── */
+.reviews__card {
+  flex-shrink: 0;
+  width: 520px;
+  background: #0e111e;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+.reviews__card-spotlight {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(circle at var(--sx,50%) var(--sy,50%), rgba(139,92,246,0.18), transparent 70%);
+  z-index: 1;
+}
+.reviews__card:hover .reviews__card-spotlight { opacity: 1; }
+.reviews__card-body { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+/* ── Profile row ── */
+.reviews__profile-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.reviews__avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 19px; flex-shrink: 0;
+  font-family: var(--font-display);
+}
+.reviews__profile-info { flex: 1; }
+.reviews__profile-name {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 700; color: #fff; line-height: 1.2;
+}
+.reviews__profile-time {
+  font-size: 14px; color: rgba(255,255,255,0.45); margin-top: 2px;
+}
+
+/* ── Review text ── */
+.reviews__text {
+  font-size: 16px; color: rgba(255,255,255,0.82); line-height: 1.65; margin: 0 0 20px;
+  flex: 1;
+}
+
+/* ── Bottom row ── */
+.reviews__bottom-row {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-top: auto;
+}
+.reviews__stars { display: flex; gap: 2px; }
+.reviews__star { font-size: 20px; color: #FFC107; line-height: 1; }
+.reviews__star--empty { font-size: 20px; color: rgba(255,193,7,0.3); line-height: 1; }
+
+@media (max-width: 768px) {
+  .reviews__card { width: 300px; padding: 20px; }
+  .reviews__marquee-track { gap: 16px; }
+}
+
+/* ============================================
    SECTION SHARED
    ============================================ */
 .section-header { text-align: center; margin-bottom: 56px; }
