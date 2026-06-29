@@ -197,21 +197,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   wrapper.addEventListener('touchend', () => { isHovered = false; });
 })();
 
-// ── Theme Toggle Switcher ────────────────────────────────────────────
-(function () {
-  const toggleBtn = document.getElementById('theme-toggle');
-  if (!toggleBtn) return;
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    if (document.body.classList.contains('dark-theme')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
-    }
-  });
-})();
-
 // ── Floating WhatsApp Widget ─────────────────────────────────────────
 (function () {
   const waButton = document.getElementById('wa-button');

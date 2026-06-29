@@ -44,29 +44,6 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Premium Dark Mode Theme --- */
-body.dark-theme {
-  --bg: #0a0e1a;
-  --bg-elevated: #111827;
-  --bg-card: #1a2035;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(255, 255, 255, 0.15);
-  --border-review: rgba(139, 92, 246, 0.3);
-  --header-bg: rgba(10, 14, 26, 0.85);
-  --text: #f1f5f9;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
-  --primary: #3b82f6;
-  --primary-glow: rgba(59, 130, 246, 0.25);
-  --accent: #f59e0b;
-  --accent-glow: rgba(245, 158, 11, 0.2);
-  --danger: #ef4444;
-  --danger-glow: rgba(239, 68, 68, 0.2);
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-}
-
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -1417,52 +1394,6 @@ button[data-fs-submit-btn][disabled] {
   }
 }
 
-/* Dark theme button background override */
-body.dark-theme .btn--primary {
-  --shiny-bg: #060a18;
-}
-
-/* Header Theme Toggle */
-.header__theme-toggle {
-  background: transparent;
-  border: none;
-  color: var(--text-muted);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.header__theme-toggle:hover {
-  background: var(--surface);
-  color: var(--text);
-}
-
-.header__theme-toggle svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.header__theme-toggle .sun-icon {
-  display: none;
-}
-
-.header__theme-toggle .moon-icon {
-  display: block;
-}
-
-body.dark-theme .header__theme-toggle .sun-icon {
-  display: block;
-}
-
-body.dark-theme .header__theme-toggle .moon-icon {
-  display: none;
-}
-
 /* ── WhatsApp Widget ── */
 .wa-widget {
   position: fixed;
@@ -1536,9 +1467,6 @@ body.dark-theme .header__theme-toggle .moon-icon {
   transform-origin: bottom right;
 }
 
-body.dark-theme .wa-chat-box {
-  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.5);
-}
 
 .wa-chat-box.wa-chat-box--active {
   opacity: 1;
@@ -1628,9 +1556,6 @@ body.dark-theme .wa-chat-box {
   position: relative;
 }
 
-body.dark-theme .wa-chat-body {
-  background: #0b141a;
-}
 
 .wa-chat-body::before {
   content: '';
@@ -1650,10 +1575,6 @@ body.dark-theme .wa-chat-body {
   z-index: 1;
 }
 
-body.dark-theme .wa-chat-msg-bubble {
-  background: #1f2c34;
-  color: #f1f5f9;
-}
 
 .wa-chat-msg-text {
   font-size: 0.88rem;
