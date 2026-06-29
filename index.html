@@ -25,8 +25,8 @@
 </head>
 <body>
   <script>
-    if (localStorage.getItem('theme') === 'light') {
-      document.body.classList.add('light-theme');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme');
     }
   </script>
 
@@ -37,9 +37,15 @@
         <svg class="header__logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z" stroke="var(--primary)" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="header__logo-text">Adequação Digital</span>
       </a>
-      <a href="#formulario" class="header__cta btn btn--sm btn--outline" id="cta-header">
-        Regularizar Loja
-      </a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="header__theme-toggle" id="theme-toggle" aria-label="Alterar tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#formulario" class="header__cta btn btn--sm btn--outline" id="cta-header">
+          Regularizar Loja
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -339,11 +345,46 @@
     </div>
   </div>
 
-  <!-- Floating Theme Toggle Button -->
-  <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alterar tema">
-    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-  </button>
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-widget" id="wa-widget">
+    <button class="wa-button" id="wa-button" aria-label="Falar no WhatsApp">
+      <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.37 5.054L2 22l5.077-1.33a9.92 9.96 0 004.93 1.302c5.507 0 9.99-4.478 9.995-9.985A9.99 9.99 0 0012.012 2zm5.718 13.972c-.25.703-1.455 1.285-2.006 1.37-.5.077-1.15.143-3.353-.772-2.818-1.17-4.633-4.04-4.774-4.227-.14-.188-1.137-1.513-1.137-2.887 0-1.373.72-2.046.975-2.316.254-.27.553-.337.738-.337.184 0 .368.002.53.01.17.008.399-.064.62.464.226.54.774 1.89.842 2.03.067.137.112.298.022.482-.09.183-.135.297-.27.457-.137.16-.287.357-.41.48-.135.137-.277.287-.12.557.157.27.7 1.153 1.5 1.867.799.715 1.47 1.135 1.772 1.286.3.15.474.128.65-.07.178-.2.774-.903.98-1.21.206-.308.41-.257.693-.15.282.1.1.796.883.35 1.137.55 1.306.638.167.085.28.128.32.2.04.072.04.42-.21 1.122z"/>
+      </svg>
+      <span class="wa-badge">1</span>
+    </button>
+    
+    <div class="wa-chat-box" id="wa-chat-box">
+      <div class="wa-chat-header">
+        <div class="wa-chat-avatar-wrap">
+          <div class="wa-chat-avatar">A</div>
+          <span class="wa-chat-online-dot"></span>
+        </div>
+        <div class="wa-chat-header-info">
+          <h4 class="wa-chat-name">André</h4>
+          <span class="wa-chat-status">Geralmente responde em minutos</span>
+        </div>
+        <button class="wa-chat-close" id="wa-chat-close" aria-label="Fechar conversa">&times;</button>
+      </div>
+      
+      <div class="wa-chat-body">
+        <div class="wa-chat-msg-bubble">
+          <p class="wa-chat-msg-text">Olá! 👋 Como posso ajudar a adequar a sua loja WooCommerce?</p>
+          <span class="wa-chat-msg-time">Agora</span>
+        </div>
+      </div>
+      
+      <div class="wa-chat-footer">
+        <input type="text" class="wa-chat-input" id="wa-chat-input" placeholder="Escreva uma mensagem..." />
+        <button class="wa-chat-send" id="wa-chat-send" aria-label="Enviar mensagem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

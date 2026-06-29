@@ -203,11 +203,68 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   if (!toggleBtn) return;
 
   toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light-theme');
-    if (document.body.classList.contains('light-theme')) {
-      localStorage.setItem('theme', 'light');
-    } else {
+    document.body.classList.toggle('dark-theme');
+    if (document.body.classList.contains('dark-theme')) {
       localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
     }
   });
+})();
+
+// ── Floating WhatsApp Widget ─────────────────────────────────────────
+(function () {
+  const waButton = document.getElementById('wa-button');
+  const waChatBox = document.getElementById('wa-chat-box');
+  const waChatClose = document.getElementById('wa-chat-close');
+  const waChatInput = document.getElementById('wa-chat-input');
+  const waChatSend = document.getElementById('wa-chat-send');
+
+  if (!waButton || !waChatBox) return;
+
+  // Toggle chat box
+  waButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    waChatBox.classList.toggle('wa-chat-box--active');
+  });
+
+  // Close chat box
+  if (waChatClose) {
+    waChatClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      waChatBox.classList.remove('wa-chat-box--active');
+    });
+  }
+
+  // Click outside to close
+  document.addEventListener('click', (e) => {
+    if (!waChatBox.contains(e.target) && !waButton.contains(e.target)) {
+      waChatBox.classList.remove('wa-chat-box--active');
+    }
+  });
+
+  // Redirect to WhatsApp function
+  function sendToWhatsApp() {
+    const text = waChatInput.value.trim();
+    const defaultText = "Olá! Gostaria de saber mais sobre a adequação da minha loja WooCommerce.";
+    const message = text ? text : defaultText;
+    const url = `https://wa.me/3584578337530?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+    waChatBox.classList.remove('wa-chat-box--active');
+    waChatInput.value = '';
+  }
+
+  // Send click event
+  if (waChatSend) {
+    waChatSend.addEventListener('click', sendToWhatsApp);
+  }
+
+  // Send keypress Enter event
+  if (waChatInput) {
+    waChatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        sendToWhatsApp();
+      }
+    });
+  }
 })();
