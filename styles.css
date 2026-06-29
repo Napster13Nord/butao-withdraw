@@ -19,6 +19,8 @@
   --surface-hover: rgba(255, 255, 255, 0.08);
   --border: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.15);
+  --border-review: rgba(139, 92, 246, 0.3);
+  --header-bg: rgba(10, 14, 26, 0.85);
   --text: #f1f5f9;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
@@ -40,6 +42,29 @@
   --font-display: 'Manrope', -apple-system, sans-serif;
   --mono: 'JetBrains Mono', monospace;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Premium Light Mode Theme --- */
+body.light-theme {
+  --bg: #f8fafc;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --surface: rgba(15, 23, 42, 0.04);
+  --surface-hover: rgba(15, 23, 42, 0.08);
+  --border: rgba(15, 23, 42, 0.08);
+  --border-hover: rgba(15, 23, 42, 0.15);
+  --border-review: rgba(139, 92, 246, 0.2);
+  --header-bg: rgba(248, 250, 252, 0.85);
+  --text: #0f172a;
+  --text-muted: #334155;
+  --text-dim: #64748b;
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.12);
+  --accent: #d97706;
+  --accent-glow: rgba(217, 119, 6, 0.12);
+  --danger: #dc2626;
+  --danger-glow: rgba(220, 38, 38, 0.1);
+  --shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1), 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
 html {
@@ -103,7 +128,7 @@ strong {
   right: 0;
   z-index: 100;
   padding: 16px 0;
-  background: rgba(10, 14, 26, 0.8);
+  background: var(--header-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
@@ -455,8 +480,8 @@ strong {
 .reviews__card {
   flex-shrink: 0;
   width: 520px;
-  background: #0e111e;
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  background: var(--bg-card);
+  border: 1px solid var(--border-review);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -465,6 +490,7 @@ strong {
   position: relative;
   overflow: hidden;
   user-select: none;
+  box-shadow: var(--shadow);
 }
 
 .reviews__card-spotlight {
@@ -519,20 +545,20 @@ strong {
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   line-height: 1.2;
 }
 
 .reviews__profile-time {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-dim);
   margin-top: 2px;
 }
 
 /* ── Review text ── */
 .reviews__text {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-muted);
   line-height: 1.65;
   margin: 0 0 20px;
   flex: 1;
@@ -1389,4 +1415,66 @@ button[data-fs-submit-btn][disabled] {
     padding: 14px 24px;
     font-size: 0.9rem;
   }
+}
+
+/* Light theme button background override */
+body.light-theme .btn--primary {
+  --shiny-bg: #0f172a;
+}
+
+/* Floating Theme Toggle Switch */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme .theme-toggle-btn {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.15);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px -5px var(--primary-glow);
+}
+
+.theme-toggle-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-btn .sun-icon {
+  display: none;
+}
+
+.theme-toggle-btn .moon-icon {
+  display: block;
+}
+
+body.light-theme .theme-toggle-btn .sun-icon {
+  display: block;
+}
+
+body.light-theme .theme-toggle-btn .moon-icon {
+  display: none;
 }

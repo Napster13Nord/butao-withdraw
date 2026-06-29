@@ -196,3 +196,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }, { passive: true });
   wrapper.addEventListener('touchend', () => { isHovered = false; });
 })();
+
+// ── Theme Toggle Switcher ────────────────────────────────────────────
+(function () {
+  const toggleBtn = document.getElementById('theme-toggle');
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    if (document.body.classList.contains('light-theme')) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+})();
