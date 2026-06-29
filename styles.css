@@ -608,6 +608,15 @@ button[data-fs-submit-btn][disabled] {
 .footer__text {
   font-size: 0.8rem; color: var(--text-dim); max-width: 500px; line-height: 1.6;
 }
+.footer__credit {
+  font-size: 0.75rem; color: var(--text-dim); opacity: 0.6;
+}
+.footer__credit-link {
+  color: var(--text-dim); text-decoration: underline;
+  text-underline-offset: 3px; opacity: 0.7;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+.footer__credit-link:hover { color: var(--text-muted); opacity: 1; }
 
 /* ============================================
    MODAL
