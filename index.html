@@ -286,8 +286,9 @@
             <span id="telemovel-error" data-fs-error="telemovel" class="form-field-error"></span>
           </div>
           <div class="form-group">
-            <label class="form-label" for="loja-link">Link da Loja <span class="form-optional">(Opcional)</span></label>
-            <input type="url" id="loja-link" name="loja-link" class="form-input" placeholder="https://minhaloja.pt" data-fs-field />
+            <label class="form-label" for="loja-link">Link da Loja <span class="form-required">*</span></label>
+            <input type="text" id="loja-link" name="loja-link" class="form-input" placeholder="https://minhaloja.pt ou minhaloja.pt" required data-fs-field aria-describedby="loja-link-error" />
+            <span class="form-error" id="loja-link-error" data-fs-error style="display:none"></span>
           </div>
           <button type="submit" class="btn btn--lg btn--primary btn--full" id="cta-submit" data-fs-submit-btn>
             <span class="btn__text">Enviar Pedido de Adequação</span>
