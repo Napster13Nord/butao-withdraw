@@ -19,7 +19,7 @@ export function Hero() {
       <div className="mt-28 flex w-full flex-col items-center gap-6 sm:mt-48">
         <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 px-3.5 py-1.5 text-xs font-medium tracking-tight text-muted-foreground backdrop-blur">
           <ShieldCheck className="size-3.5 text-foreground" />
-          Diretiva UE 2023/2673 · Obrigatório desde 2026
+          Diretiva UE 2023/2673 · Obrigatório desde junho de 2026
         </div>
 
         <h1 className="max-w-4xl text-center text-4xl leading-[1.1] font-medium tracking-tight sm:text-6xl">
