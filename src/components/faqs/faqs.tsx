@@ -81,8 +81,8 @@ export function FAQs() {
           <AccordionTriggerFAQs>Funciona na minha loja WooCommerce?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              Sim. A instalação é feita diretamente na sua loja WooCommerce, sem plugins de terceiros
-              e sem interromper as suas vendas.
+              Sim. A instalação é feita diretamente na sua loja WooCommerce, sem interromper as suas
+              vendas.
             </p>
           </AccordionContentFAQs>
         </AccordionItemFAQs>
@@ -117,4 +117,3 @@ export function FAQs() {
     </div>
   );
 }
-

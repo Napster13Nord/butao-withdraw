@@ -13,7 +13,7 @@ export const defaultFeaturedItems: FeaturedItem[] = [
     span: "half",
     title: "Configuração direta no WooCommerce.",
     description:
-      "Integração completa na sua loja, sem plugins de terceiros e sem interromper as suas vendas.",
+      "Integração completa na sua loja, sem interromper as suas vendas.",
     href: "#formulario",
     ctaAriaLabel: "Saber mais sobre a configuração",
     visual: <AiDesignVisual />,
