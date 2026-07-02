@@ -59,29 +59,31 @@ export default function Obrigado() {
       <PurchaseEvent />
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-16 sm:px-6 sm:py-24">
         {/* Header / logo */}
-        <Link href="/" className="mb-10 flex w-fit items-center gap-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path
-              d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M9 12l2 2 4-4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="text-base font-semibold tracking-tight">Adequação Digital</span>
-        </Link>
+        <div className="mb-8 flex flex-col items-center gap-4 text-center">
+          <Link href="/" className="flex items-center gap-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9 12l2 2 4-4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span className="text-base font-semibold tracking-tight">Adequação Digital</span>
+          </Link>
 
-        {/* Confirmation */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-600">
-          <CheckCircle2 className="size-3.5" />
-          Pagamento confirmado
+          {/* Confirmation */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-600">
+            <CheckCircle2 className="size-3.5" />
+            Pagamento confirmado
+          </div>
         </div>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
           Obrigado! Vamos adequar a sua loja.
