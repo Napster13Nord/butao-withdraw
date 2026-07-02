@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { STRIPE_CHECKOUT_URL } from '@/lib/site'
 
 const menuItems = [
   { name: 'O Risco', href: '#risco' },
@@ -127,9 +128,9 @@ export function Nav() {
               {/* Button */}
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:items-center sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button asChild size="sm">
-                  <Link href="#formulario" onClick={(e) => handleNavClick(e, '#formulario')}>
+                  <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
                     Adequar Loja
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
