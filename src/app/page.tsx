@@ -3,6 +3,7 @@ import { FAQs } from "@/components/faqs/faqs";
 import { FeaturedSection } from "@/components/featured/featured-section";
 import { Footer } from "@/components/footer/footer";
 import { Hero } from "@/components/hero/hero";
+import { HowItWorksSection } from "@/components/how-it-works/how-it-works-section";
 import { RiskSection } from "@/components/risk/risk-section";
 import PricingTiers, { Plan } from "@/components/ruixen/pricing-tiers";
 import { Testimonials } from "@/components/testimonials/testimonials";
@@ -35,6 +36,9 @@ export default function Home() {
       </div>
       <div id="solucao" className="scroll-mt-20">
         <FeaturedSection />
+      </div>
+      <div id="como-funciona" className="scroll-mt-20">
+        <HowItWorksSection />
       </div>
       <div id="testemunhos" className="scroll-mt-20">
         <Testimonials />
