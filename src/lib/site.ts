@@ -1,6 +1,6 @@
 // Central place for external links / offer config.
 export const STRIPE_CHECKOUT_URL = "https://buy.stripe.com/6oU7sLeXS0Hm3q98Fw7N602";
-export const PRICE_EUR = 50;
+export const PRICE_EUR = 75;
 
 // Google Analytics 4 measurement ID
 export const GA_MEASUREMENT_ID = "G-Y7TXP57D8G";

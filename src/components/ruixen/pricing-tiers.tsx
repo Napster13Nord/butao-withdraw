@@ -73,7 +73,7 @@ function Badge({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "border-foreground/20 text-foreground/80 rounded-full border px-2 py-0.5 text-xs",
+        "bg-accent/15 text-accent-foreground border-accent/30 rounded-full border px-2.5 py-0.5 text-xs font-medium whitespace-nowrap",
         className,
       )}
       {...props}
@@ -213,19 +213,20 @@ export default function PricingTiers({
             return (
               <Card key={idx}>
                 <Header glassEffect>
-                  <div className="flex flex-col items-start justify-between">
-                    <PlanName>
-                      {plan.title} {plan.badge && <Badge>{plan.badge}</Badge>}
+                  <div className="mb-4 flex items-center justify-between gap-2">
+                    <PlanName className="text-foreground text-base">
+                      {plan.title}
                     </PlanName>
-                    <div className="mb-3 flex items-end gap-1">
-                      <span className="text-3xl font-extrabold tracking-tight">
-                        {currency}
-                        <NumberFlow value={price} />
-                      </span>
-                      <span className="text-foreground/80 pb-1 text-sm">
-                        {isSingle ? priceSuffix : `/${isAnnual ? "ano" : "mês"}`}
-                      </span>
-                    </div>
+                    {plan.badge && <Badge>{plan.badge}</Badge>}
+                  </div>
+                  <div className="mb-3 flex items-baseline gap-1.5">
+                    <span className="text-5xl font-extrabold tracking-tight">
+                      {currency}
+                      <NumberFlow value={price} />
+                    </span>
+                    <span className="text-muted-foreground text-sm">
+                      {isSingle ? priceSuffix : `/${isAnnual ? "ano" : "mês"}`}
+                    </span>
                   </div>
                   <Description>{plan.description}</Description>
                   <Button asChild variant={isSingle ? "default" : "outline"} className="mt-4 w-full">
