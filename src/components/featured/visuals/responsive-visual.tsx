@@ -35,40 +35,30 @@ export function ResponsiveVisual() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-        className="w-full max-w-[240px] rounded-2xl bg-white dark:bg-neutral-900 p-3.5 ring-1 ring-neutral-200/60 dark:ring-neutral-700/60 shadow-sm"
+        className="w-full max-w-[240px] rounded-2xl bg-white p-3.5 shadow-sm ring-1 ring-neutral-200/60 dark:bg-neutral-900 dark:ring-neutral-700/60"
       >
         {/* Title */}
-        <p className="mb-3 text-[11px] font-semibold text-neutral-800 dark:text-neutral-200">
-          Cobertura de testes
-        </p>
+        <p className="mb-3 text-[11px] font-semibold text-neutral-800 dark:text-neutral-200">Cobertura de testes</p>
 
         {/* Stats row */}
         <div className="mb-3.5 flex gap-4">
           {/* Stat 1 */}
           <div>
-            <p className="mb-0.5 text-[9px] leading-tight text-neutral-400 dark:text-neutral-500">
-              Testes concluídos
-            </p>
+            <p className="mb-0.5 text-[9px] leading-tight text-neutral-400 dark:text-neutral-500">Testes concluídos</p>
             <div className="flex items-center gap-1.5">
-              <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
-                68%
-              </span>
-              <span className="rounded bg-neutral-100 dark:bg-neutral-800 px-1 py-px text-[9px] font-semibold text-neutral-600 dark:text-neutral-400">
+              <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">68%</span>
+              <span className="rounded bg-neutral-100 px-1 py-px text-[9px] font-semibold text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400">
                 12%
               </span>
             </div>
           </div>
           {/* Stat 2 */}
           <div>
-            <p className="mb-0.5 text-[9px] leading-tight text-neutral-400 dark:text-neutral-500">
-              Conformidade
-            </p>
+            <p className="mb-0.5 text-[9px] leading-tight text-neutral-400 dark:text-neutral-500">Conformidade</p>
             <div className="flex items-center gap-1.5">
-              <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
-                42%
-              </span>
-              <span className="rounded bg-neutral-100 dark:bg-neutral-800 px-1 py-px text-[9px] font-semibold text-neutral-500 dark:text-neutral-400">
-                15%
+              <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">100%</span>
+              <span className="rounded bg-neutral-100 px-1 py-px text-[9px] font-semibold text-neutral-500 dark:bg-neutral-800 dark:text-neutral-400">
+                ok
               </span>
             </div>
           </div>
@@ -78,9 +68,7 @@ export function ResponsiveVisual() {
         <div className="flex flex-col gap-1">
           {heatmapRows.map((row, rowIdx) => (
             <div key={rowIdx} className="flex items-center gap-1.5">
-              <span className="w-5 flex-shrink-0 text-[8px] text-neutral-400 dark:text-neutral-500">
-                {row.day}
-              </span>
+              <span className="w-5 flex-shrink-0 text-[8px] text-neutral-400 dark:text-neutral-500">{row.day}</span>
               <div className="grid flex-1 grid-cols-[repeat(13,minmax(0,1fr))] gap-[3px]">
                 {row.values.map((level, colIdx) => (
                   <motion.div

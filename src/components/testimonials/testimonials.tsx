@@ -139,7 +139,7 @@ export function Testimonials() {
               </div>
             </article>
 
-            <article className="bg-card mt-5 grid gap-4 rounded-2xl border p-4 shadow-sm sm:grid-cols-[1fr_190px] sm:items-center">
+            <article className="bg-card mt-5 grid gap-5 rounded-2xl border p-4 shadow-sm sm:grid-cols-[minmax(0,1fr)_minmax(250px,300px)] sm:items-center">
               <div className="flex h-full flex-col justify-between gap-5 p-1">
                 <div className="flex items-start gap-3">
                   <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
@@ -149,15 +149,12 @@ export function Testimonials() {
                     <h3 className="text-foreground text-xl font-semibold tracking-tight">
                       Review em vídeo da {videoReview.name}
                     </h3>
-                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed sm:text-base">
-                      Um depoimento curto de cliente real para complementar o case instalado, sem sobrecarregar a seção.
-                    </p>
                   </div>
                 </div>
                 <span className="text-muted-foreground text-xs font-medium">Cliente WPexperts.pt</span>
               </div>
 
-              <div className="bg-secondary/40 mx-auto aspect-[9/16] w-full max-w-[190px] overflow-hidden rounded-xl">
+              <div className="bg-secondary/40 mx-auto aspect-[9/16] w-full max-w-[285px] overflow-hidden rounded-xl sm:max-w-none">
                 <video
                   className="h-full w-full object-cover"
                   controls
