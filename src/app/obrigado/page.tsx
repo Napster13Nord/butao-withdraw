@@ -4,6 +4,7 @@ import { CheckCircle2, UserPlus, Send, ShieldCheck, Clock, Mail } from "lucide-r
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer/footer";
 import { BUSINESS_EMAIL, whatsappLink } from "@/lib/site";
+import { PurchaseEvent } from "@/components/analytics/purchase-event";
 
 export const metadata: Metadata = {
   title: "Obrigado! Próximos passos — Adequação Digital",
@@ -55,6 +56,7 @@ export default function Obrigado() {
 
   return (
     <div className="flex min-h-screen flex-col">
+      <PurchaseEvent />
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-16 sm:px-6 sm:py-24">
         {/* Header / logo */}
         <Link href="/" className="mb-10 flex w-fit items-center gap-2">
