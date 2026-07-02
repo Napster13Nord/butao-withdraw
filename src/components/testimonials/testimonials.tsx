@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { GOOGLE_BUSINESS_PROFILE_URL, WPEXPERTS_URL } from "@/lib/site";
-import { ExternalLink, PlayCircle, ShieldCheck, Star, Video } from "lucide-react";
+import { GOOGLE_BUSINESS_PROFILE_URL, IRINA_CASE_STUDY_URL, WPEXPERTS_URL } from "@/lib/site";
+import { ExternalLink, MonitorCheck, PlayCircle, ShieldCheck, Star, Video } from "lucide-react";
 
 export type Testimonial = {
   name: string;
@@ -114,6 +115,39 @@ export function Testimonials() {
           </div>
 
           <div>
+            <article className="bg-card mb-6 overflow-hidden rounded-2xl border shadow-sm">
+              <div className="bg-secondary/40 relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/case-studies/irina-livre-resolucao.png"
+                  alt="Página de Direito de Livre Resolução instalada no site da Irina SB"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(min-width: 1024px) 610px, 100vw"
+                />
+              </div>
+              <div className="p-5 sm:p-6">
+                <div className="flex items-start gap-3">
+                  <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
+                    <MonitorCheck className="size-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-foreground text-xl font-semibold tracking-tight">Case real instalado</h3>
+                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed sm:text-base">
+                      O formulário de livre resolução já está ativo no site da Irina SB, cliente também presente nos
+                      reviews em vídeo.
+                    </p>
+                  </div>
+                </div>
+
+                <Button asChild className="mt-5 w-full rounded-sm sm:w-fit">
+                  <a href={IRINA_CASE_STUDY_URL} target="_blank" rel="noopener noreferrer">
+                    Ver página real
+                    <ExternalLink className="size-4" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+            </article>
+
             <div className="mb-4 flex items-center gap-3">
               <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
                 <Video className="size-5" aria-hidden="true" />

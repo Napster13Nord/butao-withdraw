@@ -3,6 +3,7 @@ export const STRIPE_CHECKOUT_URL = "https://buy.stripe.com/6oU7sLeXS0Hm3q98Fw7N6
 export const PRICE_EUR = 75;
 export const WPEXPERTS_URL = "https://wpexperts.pt/";
 export const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/acTxW1yGycQeFZMwd";
+export const IRINA_CASE_STUDY_URL = "https://irinasb.com/direito-de-livre-resolucao/";
 
 // Google Analytics 4 measurement ID
 export const GA_MEASUREMENT_ID = "G-Y7TXP57D8G";
