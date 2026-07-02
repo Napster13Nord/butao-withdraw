@@ -7,6 +7,7 @@ const links = [
     links: [
       { label: "O Risco", href: "#risco" },
       { label: "Solução", href: "#solucao" },
+      { label: "Como funciona", href: "#como-funciona" },
       { label: "Testemunhos", href: "#testemunhos" },
       { label: "Preço", href: "#preco" },
       { label: "Perguntas frequentes", href: "#faq" },
@@ -15,7 +16,7 @@ const links = [
   {
     title: "Adequação",
     links: [
-      { label: "Regularizar loja", href: "#formulario" },
+      { label: "Regularizar loja", href: "#preco" },
       { label: "Diretiva UE 2023/2673", href: "#risco" },
       { label: "Falar connosco", href: "#formulario" },
     ],
@@ -32,13 +33,7 @@ function Logo() {
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-        <path
-          d="M9 12l2 2 4-4"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <span className="text-base font-semibold tracking-tight">Adequação Digital</span>
     </Link>
@@ -55,22 +50,22 @@ export function Footer() {
           {/* Logo and description */}
           <div className="md:col-span-2">
             <Logo />
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Adequamos a sua loja WooCommerce ao Botão de Livre Resolução, em estrita conformidade
-              com a Diretiva Europeia (UE) 2023/2673. Instalação em 24h por 75€.
+            <p className="text-muted-foreground mt-4 max-w-sm text-sm leading-relaxed">
+              Adequamos a sua loja WooCommerce ao Botão de Livre Resolução, em estrita conformidade com a Diretiva
+              Europeia (UE) 2023/2673. Instalação em 24h por 75€.
             </p>
           </div>
 
           {/* Link columns */}
           {links.map((section) => (
             <div key={section.title}>
-              <h3 className="mb-4 text-sm font-semibold text-foreground">{section.title}</h3>
+              <h3 className="text-foreground mb-4 text-sm font-semibold">{section.title}</h3>
               <ul className="space-y-3">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -83,7 +78,7 @@ export function Footer() {
 
         {/* Bottom section */}
         <div className="mt-12 flex flex-col items-center gap-4 border-t pt-8 text-center md:flex-row md:justify-between md:text-left">
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="text-muted-foreground flex items-center gap-4 text-sm">
             <Link href="/privacidade" className="hover:text-foreground">
               Privacidade
             </Link>
@@ -91,20 +86,20 @@ export function Footer() {
               Termos
             </Link>
           </div>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Concebido por{" "}
             <a
               href="https://wpexperts.pt"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-foreground"
+              className="hover:text-foreground underline underline-offset-2"
             >
               WPexperts.pt
             </a>
           </p>
-          <p className="max-w-md text-sm text-muted-foreground md:text-right">
-            © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a
-            Diretiva Europeia (UE) 2023/2673.
+          <p className="text-muted-foreground max-w-md text-sm md:text-right">
+            © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a Diretiva Europeia (UE)
+            2023/2673.
           </p>
         </div>
       </div>

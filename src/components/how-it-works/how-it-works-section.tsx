@@ -16,8 +16,8 @@ const steps = [
   },
   {
     icon: Wrench,
-    title: "Eu configuro e testo",
-    description: "Configuro o botão, o fluxo em 2 passos e o e-mail legal. Depois valido tudo ao vivo.",
+    title: "Nós configuramos e testamos",
+    description: "Configuramos o botão, o fluxo em 2 passos e o e-mail legal. Depois validamos tudo ao vivo.",
   },
 ];
 
@@ -37,7 +37,7 @@ export function HowItWorksSection() {
                   Do pagamento à loja em conformidade
                 </h2>
                 <p className="text-muted-foreground mt-4 max-w-md text-base leading-relaxed sm:text-lg">
-                  Paga o serviço, cria um acesso temporário e eu deixo o botão legal configurado na sua loja em 24h.
+                  Paga o serviço, cria um acesso temporário e nós deixamos o botão legal configurado na sua loja em 24h.
                 </p>
                 <Button className="mt-7 w-full rounded-sm sm:w-fit" size="lg" asChild>
                   <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
