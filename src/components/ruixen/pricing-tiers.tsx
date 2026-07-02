@@ -39,7 +39,7 @@ function Header({
       {glassEffect && (
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-48 rounded-[inherit]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-48 rounded-[inherit]"
           style={{
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.03) 40%, rgba(0,0,0,0) 100%)",
@@ -229,9 +229,18 @@ export default function PricingTiers({
                   </div>
                   <Description>{plan.description}</Description>
                   <Button asChild variant={isSingle ? "default" : "outline"} className="mt-4 w-full">
-                    <Link href={isSingle ? ctaHref : "#formulario"}>
-                      {isSingle ? ctaLabel : "Começar"}
-                    </Link>
+                    {(() => {
+                      const href = isSingle ? ctaHref : "#formulario";
+                      const label = isSingle ? ctaLabel : "Começar";
+                      const isExternal = href.startsWith("http");
+                      return isExternal ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer">
+                          {label}
+                        </a>
+                      ) : (
+                        <Link href={href}>{label}</Link>
+                      );
+                    })()}
                   </Button>
                 </Header>
 
