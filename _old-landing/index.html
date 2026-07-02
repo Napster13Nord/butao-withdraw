@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7TXP57D8G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y7TXP57D8G');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adequação Digital - Botão de Livre Resolução para E-commerce</title>
+  <meta name="description" content="Instale o botão obrigatório de Livre Resolução (Arrependimento) na sua loja WooCommerce. Evite coimas até 2 milhões de euros. Entrega em 24h por apenas 100€." />
+  <meta name="keywords" content="botão arrependimento, livre resolução, diretiva europeia 2023/2673, e-commerce portugal, woocommerce, coimas" />
+  <meta name="author" content="Adequação Digital" />
+  <meta property="og:title" content="Adequação Digital - Botão de Arrependimento Obrigatório" />
+  <meta property="og:description" content="A sua loja cumpre a lei do Botão de Arrependimento? Instalamos em 24h por 100€. Evite coimas pesadas." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Geist:wght@400;500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="header__nav">
+      <a href="#" class="header__logo" id="logo">
+        <svg class="header__logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z" stroke="var(--primary)" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="header__logo-text">Adequação Digital</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#formulario" class="header__cta btn btn--sm btn--outline" id="cta-header">
+          Regularizar Loja
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-effects">
+      <div class="hero__gradient-wash"></div>
+    </div>
+    <div class="container hero__content">
+      <div class="hero__badge reveal" id="hero-badge">
+        Diretiva UE 2023/2673 - Obrigatório desde 2026
+      </div>
+      <h1 class="hero__title reveal" id="hero-title">
+        A sua loja <span class="hero__highlight">WooCommerce</span> cumpre a lei do Botão de Arrependimento?
+      </h1>
+      <p class="hero__subtitle reveal" id="hero-subtitle">
+        Evite coimas pesadas e a extensão das devoluções por 1 ano. Instalamos o botão obrigatório em 24h.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#formulario" class="btn btn--lg btn--primary" id="cta-hero">
+          <span class="btn__text">Adequar Agora por 100€</span>
+          <span class="btn__arrow">→</span>
+        </a>
+      </div>
+      <div class="hero__badges reveal">
+        <div class="hero__badge-item" id="badge-24h">
+          <svg class="hero__badge-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Instalação em 24h</span>
+        </div>
+        <div class="hero__badge-item" id="badge-2steps">
+          <svg class="hero__badge-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Fluxo em 2 passos</span>
+        </div>
+        <div class="hero__badge-item" id="badge-email">
+          <svg class="hero__badge-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M22 7l-10 7L2 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>E-mail automático</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO: TESTEMUNHOS -->
+  <section class="reviews" id="testemunhos" aria-label="Testemunhos de clientes">
+    <div class="reviews__marquee-wrapper" id="reviews-marquee" style="cursor:grab">
+      <div class="reviews__marquee-track" id="reviews-track">
+        <!-- Cards duplicados para loop infinito - gerados por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 3: O RISCO (PAIN POINTS) -->
+  <section class="risk" id="risco">
+    <div class="container">
+      <div class="section-header reveal">
+
+        <h2 class="section-title" id="risk-title">O que acontece se a sua loja <span class="text-danger">não tiver</span> este botão?</h2>
+        <p class="section-desc" id="risk-desc">
+          As autoridades europeias utilizam <strong>sistemas automatizados de varredura</strong> (web sweeps) para detetar e-commerce em incumprimento.
+        </p>
+      </div>
+      <div class="risk__grid">
+        <div class="risk__card risk__card--coimas reveal" id="risk-coimas">
+          <div class="risk__card-icon-wrap">
+            <svg class="risk__card-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="risk__card-label">Coimas</div>
+          <h3 class="risk__card-title">Multas de até <span class="text-danger">4%</span> do Volume de Negócios</h3>
+          <p class="risk__card-text">
+            Multas de até <strong>4% do Volume de Negócios anual</strong> ou até <strong>2 milhões de euros</strong>, consoante o que for mais elevado.
+          </p>
+          <div class="risk__card-amount">até €2.000.000</div>
+        </div>
+        <div class="risk__card risk__card--punicao reveal" id="risk-punicao">
+          <div class="risk__card-icon-wrap">
+            <svg class="risk__card-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M10 15h4M12 13v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="risk__card-label">Punição Automática</div>
+          <h3 class="risk__card-title">Devolução salta de <span class="text-danger">14 dias</span> para <span class="text-danger">1 ano</span></h3>
+          <p class="risk__card-text">
+            O direito do cliente devolver o produto salta automaticamente de <strong>14 dias</strong> para <strong>1 ano e 14 dias</strong> se o botão não existir.
+          </p>
+          <div class="risk__card-timeline">
+            <div class="risk__timeline-item risk__timeline-item--before">
+              <span class="risk__timeline-label">Com botão</span>
+              <span class="risk__timeline-value">14 dias</span>
+            </div>
+            <div class="risk__timeline-arrow">→</div>
+            <div class="risk__timeline-item risk__timeline-item--after">
+              <span class="risk__timeline-label">Sem botão</span>
+              <span class="risk__timeline-value">1 ano + 14 dias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 4: A SOLUÇÃO (O SERVIÇO) -->
+  <section class="solution" id="solucao">
+    <div class="container">
+      <div class="section-header reveal">
+
+        <h2 class="section-title" id="solution-title">Solução Técnica, Rápida e Completa</h2>
+        <p class="section-desc" id="solution-desc">
+          Não perca tempo com relatórios jurídicos. Eu trato de toda a integração técnica <strong>sem interromper as suas vendas</strong>.
+        </p>
+      </div>
+      <div class="solution__grid">
+        <div class="solution__card reveal" id="benefit-woo">
+          <div class="solution__card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 8.68a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1Z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="solution__card-title">Configuração Direta</h3>
+          <p class="solution__card-text">
+            Configuração direta na sua loja <strong>WooCommerce</strong>.
+          </p>
+        </div>
+        <div class="solution__card reveal" id="benefit-2steps">
+          <div class="solution__card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="3" width="6" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="solution__card-title">2 Passos Estritos</h3>
+          <p class="solution__card-text">
+            Botão visível em <strong>2 passos estritos</strong> exigidos por lei.
+          </p>
+        </div>
+        <div class="solution__card reveal" id="benefit-form">
+          <div class="solution__card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="solution__card-title">Formulário Adaptado</h3>
+          <p class="solution__card-text">
+            Formulário adaptado para <strong>utilizadores registados</strong> e <strong>convidados</strong>.
+          </p>
+        </div>
+        <div class="solution__card reveal" id="benefit-email">
+          <div class="solution__card-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M22 7l-10 7L2 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 17l2-2-2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="solution__card-title">E-mail Automático</h3>
+          <p class="solution__card-text">
+            Disparo automático do <strong>e-mail de confirmação legal</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 5: OFERTA E PREÇO -->
+  <section class="pricing" id="preco">
+    <div class="container">
+      <div class="section-header reveal">
+
+        <h2 class="section-title" id="pricing-title">Investimento Único e Transparente</h2>
+      </div>
+      <div class="pricing__card reveal" id="pricing-card">
+        <div class="pricing__card-glow"></div>
+        <div class="pricing__card-inner">
+          <div class="pricing__ribbon">Oferta Limitada</div>
+          <div class="pricing__label">Instalação Completa</div>
+          <div class="pricing__amount">
+            <span class="pricing__currency">€</span>
+            <span class="pricing__value">100</span>
+          </div>
+          <div class="pricing__note">Valor fixo, sem mensalidades</div>
+          <div class="pricing__divider"></div>
+          <ul class="pricing__features">
+            <li class="pricing__feature" id="feature-integracao">
+              <span class="pricing__feature-check">✓</span>
+              Integração técnica completa
+            </li>
+            <li class="pricing__feature" id="feature-testes">
+              <span class="pricing__feature-check">✓</span>
+              Testes ao vivo na sua loja
+            </li>
+            <li class="pricing__feature" id="feature-fluxo">
+              <span class="pricing__feature-check">✓</span>
+              Fluxo de e-mail configurado
+            </li>
+            <li class="pricing__feature" id="feature-suporte">
+              <span class="pricing__feature-check">✓</span>
+              Suporte pós-venda em 24h
+            </li>
+          </ul>
+          <a href="#formulario" class="btn btn--lg btn--primary btn--full" id="cta-pricing">
+            <span class="btn__text">Garantir Vaga em 24h</span>
+            <span class="btn__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECÇÃO 6: FORMULÁRIO DE CONTACTO -->
+  <section class="contact" id="formulario">
+    <div class="container">
+      <div class="section-header reveal">
+
+        <h2 class="section-title" id="contact-title">Proteja a Sua Loja Ainda Hoje</h2>
+      </div>
+      <div class="contact__wrapper reveal">
+        <div class="contact__info">
+          <div class="contact__info-card">
+            <h3 class="contact__info-title">Porquê agir agora?</h3>
+            <ul class="contact__info-list">
+              <li>
+                <svg class="contact__info-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <span>Instalação garantida em <strong>24 horas</strong></span>
+              </li>
+              <li>
+                <svg class="contact__info-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>Proteção imediata contra <strong>coimas</strong></span>
+              </li>
+              <li>
+                <svg class="contact__info-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M15 9.35a3.5 3.5 0 01-5.78 3.84M9.88 9.88a3.5 3.5 0 014.24 0M12 17v.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>Investimento único de <strong>100€</strong></span>
+              </li>
+              <li>
+                <svg class="contact__info-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                <span>Conformidade total com a <strong>Diretiva UE</strong></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form
+          class="contact__form"
+          id="lead-form"
+          action="https://formspree.io/f/xkolzjow"
+          method="POST"
+        >
+          <input type="hidden" name="plataforma" value="WooCommerce" />
+          <div class="form-group">
+            <label class="form-label" for="nome">Nome Completo <span class="form-required">*</span></label>
+            <input type="text" id="nome" name="nome" class="form-input" placeholder="O seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">E-mail de Contacto <span class="form-required">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="exemplo@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telemovel">Telemóvel / WhatsApp <span class="form-required">*</span></label>
+            <div class="form-input-group">
+              <span class="form-input-prefix">+351</span>
+              <input type="tel" id="telemovel" name="telemovel" class="form-input form-input--prefix" placeholder="912 345 678" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loja-link">Link da Loja <span class="form-required">*</span></label>
+            <input type="text" id="loja-link" name="loja-link" class="form-input" placeholder="https://minhaloja.pt ou minhaloja.pt" required />
+          </div>
+          <button type="submit" class="btn btn--lg btn--primary btn--full" id="cta-submit">
+            <span class="btn__text">Enviar Pedido de Adequação</span>
+            <span class="btn__arrow">→</span>
+          </button>
+          <p class="form-disclaimer">
+            Os seus dados são tratados com total confidencialidade e utilizados apenas para o processo de adequação.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <svg class="footer__logo-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z" stroke="var(--primary)" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="footer__logo-text">Adequação Digital</span>
+        </div>
+        <p class="footer__text">
+          © 2026 Adequação Digital. Desenvolvido em estrita conformidade com a Diretiva Europeia (UE) 2023/2673 para e-commerce.
+        </p>
+        <p class="footer__credit">
+          Concebido e desenvolvido por <a href="https://wpexperts.pt" class="footer__credit-link" target="_blank" rel="noopener noreferrer">WPexperts.pt</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal" id="success-modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <div class="modal__icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="var(--success)" stroke-width="1.5"/><path d="M9 12l2 2 4-4" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 class="modal__title">Pedido Enviado com Sucesso!</h3>
+      <p class="modal__text">Entraremos em contacto nas próximas horas para iniciar a adequação da sua loja.</p>
+      <button class="btn btn--primary" id="modal-close" onclick="document.getElementById('success-modal').classList.remove('modal--active')">
+        <span class="btn__text">Fechar</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-widget" id="wa-widget">
+    <button class="wa-button" id="wa-button" aria-label="Falar no WhatsApp">
+      <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.37 5.054L2 22l5.077-1.33a9.92 9.96 0 004.93 1.302c5.507 0 9.99-4.478 9.995-9.985A9.99 9.99 0 0012.012 2zm5.718 13.972c-.25.703-1.455 1.285-2.006 1.37-.5.077-1.15.143-3.353-.772-2.818-1.17-4.633-4.04-4.774-4.227-.14-.188-1.137-1.513-1.137-2.887 0-1.373.72-2.046.975-2.316.254-.27.553-.337.738-.337.184 0 .368.002.53.01.17.008.399-.064.62.464.226.54.774 1.89.842 2.03.067.137.112.298.022.482-.09.183-.135.297-.27.457-.137.16-.287.357-.41.48-.135.137-.277.287-.12.557.157.27.7 1.153 1.5 1.867.799.715 1.47 1.135 1.772 1.286.3.15.474.128.65-.07.178-.2.774-.903.98-1.21.206-.308.41-.257.693-.15.282.1.1.796.883.35 1.137.55 1.306.638.167.085.28.128.32.2.04.072.04.42-.21 1.122z"/>
+      </svg>
+      <span class="wa-badge">1</span>
+    </button>
+    
+    <div class="wa-chat-box" id="wa-chat-box">
+      <div class="wa-chat-header">
+        <div class="wa-chat-avatar-wrap">
+          <div class="wa-chat-avatar">A</div>
+          <span class="wa-chat-online-dot"></span>
+        </div>
+        <div class="wa-chat-header-info">
+          <h4 class="wa-chat-name">André</h4>
+          <span class="wa-chat-status">Geralmente responde em minutos</span>
+        </div>
+        <button class="wa-chat-close" id="wa-chat-close" aria-label="Fechar conversa">&times;</button>
+      </div>
+      
+      <div class="wa-chat-body">
+        <div class="wa-chat-msg-bubble">
+          <p class="wa-chat-msg-text">Olá! 👋 Como posso ajudar a adequar a sua loja WooCommerce?</p>
+          <span class="wa-chat-msg-time">Agora</span>
+        </div>
+      </div>
+      
+      <div class="wa-chat-footer">
+        <input type="text" class="wa-chat-input" id="wa-chat-input" placeholder="Escreva uma mensagem..." />
+        <button class="wa-chat-send" id="wa-chat-send" aria-label="Enviar mensagem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
