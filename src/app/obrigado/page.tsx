@@ -57,7 +57,7 @@ export default function Obrigado() {
     <div className="flex min-h-screen flex-col">
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-16 sm:px-6 sm:py-24">
         {/* Header / logo */}
-        <Link href="/" className="mb-12 inline-flex items-center gap-2">
+        <Link href="/" className="mb-10 flex w-fit items-center gap-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path
               d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z"
@@ -114,7 +114,7 @@ export default function Obrigado() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="w-full sm:w-auto">
             <a href={waHref} target="_blank" rel="noopener noreferrer">
               Enviar acessos por WhatsApp
