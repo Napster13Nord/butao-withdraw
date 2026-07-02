@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -16,23 +17,8 @@ const menuItems = [
 
 function Logo() {
   return (
-    <Link href="/" aria-label="Adequação Digital" className="flex items-center gap-2">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path
-          d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M9 12l2 2 4-4"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span className="text-base font-semibold tracking-tight">Adequação Digital</span>
+    <Link href="/" aria-label="Adequação Digital">
+      <Image src="/logo.svg" alt="Adequação Digital" width={140} height={40} priority />
     </Link>
   )
 }
