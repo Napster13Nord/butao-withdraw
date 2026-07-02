@@ -7,7 +7,7 @@ import { Clock, ShieldCheck, BadgeEuro, Scale } from "lucide-react";
 const reasons = [
   { icon: Clock, text: "Instalação garantida em 24 horas" },
   { icon: ShieldCheck, text: "Proteção imediata contra coimas" },
-  { icon: BadgeEuro, text: "Investimento único de 50€" },
+  { icon: BadgeEuro, text: "Investimento único de 75€" },
   { icon: Scale, text: "Conformidade total com a Diretiva UE" },
 ];
 

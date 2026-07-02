@@ -35,7 +35,7 @@ export function Hero() {
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button className="w-fit rounded-sm" size="lg" asChild>
             <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-              Adequar Agora por 50€
+              Adequar Agora por 75€
             </a>
           </Button>
           <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">

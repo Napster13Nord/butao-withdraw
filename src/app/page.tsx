@@ -40,7 +40,7 @@ export default function Home() {
         <Testimonials />
       </div>
       <div id="preco" className="scroll-mt-20">
-        <PricingTiers plans={plan} ctaHref={STRIPE_CHECKOUT_URL} ctaLabel="Adequar Agora por 50€" />
+        <PricingTiers plans={plan} ctaHref={STRIPE_CHECKOUT_URL} ctaLabel="Adequar Agora por 75€" />
       </div>
       <div id="faq" className="scroll-mt-20">
         <FAQs />

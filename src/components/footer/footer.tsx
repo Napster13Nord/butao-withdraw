@@ -57,7 +57,7 @@ export function Footer() {
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Adequamos a sua loja WooCommerce ao Botão de Livre Resolução, em estrita conformidade
-              com a Diretiva Europeia (UE) 2023/2673. Instalação em 24h por 50€.
+              com a Diretiva Europeia (UE) 2023/2673. Instalação em 24h por 75€.
             </p>
           </div>
 
