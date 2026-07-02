@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Nested skill repo (has its own .git)
+.agents/skills/taste-skill/
