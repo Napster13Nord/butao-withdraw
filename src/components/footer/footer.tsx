@@ -82,11 +82,19 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
+        <div className="mt-12 flex flex-col items-center gap-4 border-t pt-8 md:flex-row md:justify-between">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a
             Diretiva Europeia (UE) 2023/2673.
           </p>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <Link href="/privacidade" className="hover:text-foreground">
+              Privacidade
+            </Link>
+            <Link href="/termos" className="hover:text-foreground">
+              Termos
+            </Link>
+          </div>
           <p className="text-sm text-muted-foreground">
             Concebido por{" "}
             <a

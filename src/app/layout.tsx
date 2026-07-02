@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID } from "@/lib/site";
+import { CookieConsent } from "@/components/analytics/cookie-consent";
 import "./globals.css";
 
 const inter = Inter({
@@ -38,9 +39,19 @@ export default function RootLayout({
         <Script id="ga4-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+var stored='denied';
+try{ if(localStorage.getItem('cookie-consent')==='accepted') stored='granted'; }catch(e){}
+gtag('consent','default',{
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  analytics_storage: stored,
+  wait_for_update: 500
+});
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`}
         </Script>
+        <CookieConsent />
       </body>
     </html>
   );
