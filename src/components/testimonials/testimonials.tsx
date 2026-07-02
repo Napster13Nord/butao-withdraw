@@ -53,7 +53,7 @@ export function Testimonials() {
       <p className="mb-3 max-w-lg text-center leading-6 tracking-tight text-muted-foreground sm:text-xl lg:mb-8">
         Donos de e-commerce em Portugal que adequaram a sua loja WooCommerce e deixaram de correr riscos.
       </p>
-      <div className="relative w-[calc(100%+3rem)] overflow-x-hidden py-4 lg:w-full">
+      <div className="relative w-full overflow-x-hidden py-4">
         <TestimonialMarquee testimonials={testimonials} className="mb-4" />
         <TestimonialMarquee testimonials={testimonials} reverse />
       </div>
