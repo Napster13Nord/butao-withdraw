@@ -32,13 +32,13 @@ const proofStats = [
 
 const videoReviews = [
   {
-    name: "Sollua Milfontes",
-    src: "/video%20reviews/review%20solluamilfontes.mp4",
+    name: "Irinas B",
+    src: "/video%20reviews/review%20Irinasb%20.mp4",
     label: "Review em vídeo",
   },
   {
-    name: "Irina SB",
-    src: "/video%20reviews/review%20Irinasb%20.mp4",
+    name: "Sollua Milfontes",
+    src: "/video%20reviews/review%20solluamilfontes.mp4",
     label: "Review em vídeo",
   },
 ] as const;
@@ -119,7 +119,7 @@ export function Testimonials() {
               <div className="bg-secondary/40 relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/case-studies/irina-livre-resolucao.png"
-                  alt="Página de Direito de Livre Resolução instalada no site da Irina SB"
+                  alt="Página de Direito de Livre Resolução instalada no site da Irinas B"
                   fill
                   className="object-cover object-top"
                   sizes="(min-width: 1024px) 610px, 100vw"
@@ -133,7 +133,7 @@ export function Testimonials() {
                   <div>
                     <h3 className="text-foreground text-xl font-semibold tracking-tight">Case real instalado</h3>
                     <p className="text-muted-foreground mt-2 text-sm leading-relaxed sm:text-base">
-                      O formulário de livre resolução já está ativo no site da Irina SB, cliente também presente nos
+                      O formulário de livre resolução já está ativo no site da Irinas B, cliente também presente nos
                       reviews em vídeo.
                     </p>
                   </div>
