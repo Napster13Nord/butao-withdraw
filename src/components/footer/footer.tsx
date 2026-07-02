@@ -8,7 +8,7 @@ const links = [
       { label: "O Risco", href: "#risco" },
       { label: "Solução", href: "#solucao" },
       { label: "Como funciona", href: "#como-funciona" },
-      { label: "Testemunhos", href: "#testemunhos" },
+      { label: "Prova social", href: "#testemunhos" },
       { label: "Preço", href: "#preco" },
       { label: "Perguntas frequentes", href: "#faq" },
     ],

@@ -12,6 +12,7 @@ const menuItems = [
   { name: "O Risco", href: "#risco" },
   { name: "Solução", href: "#solucao" },
   { name: "Como funciona", href: "#como-funciona" },
+  { name: "Prova social", href: "#testemunhos" },
   { name: "Preço", href: "#preco" },
   { name: "Perguntas", href: "#faq" },
 ];

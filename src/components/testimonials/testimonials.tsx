@@ -1,5 +1,6 @@
-import { Badge } from "@/components/ui/badge";
-import { TestimonialMarquee } from "@/components/testimonials/testimonial-marquee";
+import { Button } from "@/components/ui/button";
+import { GOOGLE_BUSINESS_PROFILE_URL, WPEXPERTS_URL } from "@/lib/site";
+import { ExternalLink, PlayCircle, ShieldCheck, Star, Video } from "lucide-react";
 
 export type Testimonial = {
   name: string;
@@ -10,53 +11,146 @@ export type Testimonial = {
   rating: number;
 };
 
-const testimonials = [
+const proofStats = [
   {
-    name: "Ricardo Marques",
-    date: "Loja de moda",
-    title: "Ficou tudo resolvido num dia",
-    content: `"Andava preocupado com a nova diretiva e não sabia por onde começar. Instalaram o botão na minha loja WooCommerce em menos de 24h. Simples e sem stress."`,
-    rating: 5,
+    value: "5,0/5",
+    label: "avaliação no Google",
+    detail: "perfil público da equipa",
   },
   {
-    name: "Sofia Antunes",
-    date: "Cosmética natural",
-    title: "Preço justo e transparente",
-    content: `"75€ fixos, sem mensalidades nem surpresas. Recebi o e-mail de confirmação legal a funcionar e testámos tudo ao vivo. Recomendo a qualquer e-commerce."`,
-    rating: 5,
+    value: "34",
+    label: "avaliações públicas",
+    detail: "prova social consultável",
   },
   {
-    name: "João Pereira",
-    date: "Equipamento desportivo",
-    title: "Poupou-me de uma coima",
-    content: `"Não fazia ideia que a devolução podia saltar para 1 ano sem o botão. Trataram de toda a parte técnica e agora estou em conformidade com a lei europeia."`,
-    rating: 5,
+    value: "2",
+    label: "reviews em vídeo",
+    detail: "clientes da WPexperts.pt",
+  },
+] as const;
+
+const videoReviews = [
+  {
+    name: "Sollua Milfontes",
+    src: "/video%20reviews/review%20solluamilfontes.mp4",
+    label: "Review em vídeo",
   },
   {
-    name: "Marta Figueiredo",
-    date: "Artigos para casa",
-    title: "Profissional do início ao fim",
-    content: `"Comunicação clara, entrega rápida e o fluxo de livre resolução ficou exatamente como exige a diretiva. Suporte impecável nas 24h seguintes."`,
-    rating: 5,
+    name: "Irina SB",
+    src: "/video%20reviews/review%20Irinasb%20.mp4",
+    label: "Review em vídeo",
   },
-] satisfies Testimonial[];
+] as const;
+
+function RatingStars() {
+  return (
+    <div className="flex items-center gap-1" aria-label="5 estrelas no Google">
+      {[...Array(5)].map((_, index) => (
+        <Star key={index} className="size-4 fill-yellow-400 text-yellow-400" aria-hidden="true" />
+      ))}
+    </div>
+  );
+}
 
 export function Testimonials() {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 py-14 sm:px-6 md:py-25">
-      <Badge variant="secondary" className="mb-2 uppercase">
-        Testemunhos
-      </Badge>
-      <h2 className="text-center text-3xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
-        Lojas que já estão<div className="text-muted-foreground">em conformidade</div>
-      </h2>
-      <p className="mb-3 max-w-lg text-center leading-6 tracking-tight text-muted-foreground sm:text-xl lg:mb-8">
-        Donos de e-commerce em Portugal que adequaram a sua loja WooCommerce e deixaram de correr riscos.
-      </p>
-      <div className="relative w-full overflow-x-hidden py-4">
-        <TestimonialMarquee testimonials={testimonials} className="mb-4" />
-        <TestimonialMarquee testimonials={testimonials} reverse />
+    <section className="relative py-16 sm:py-24">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <div className="bg-card text-muted-foreground inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium">
+              <ShieldCheck className="text-success size-3.5" aria-hidden="true" />
+              Prova social da equipa
+            </div>
+
+            <h2 className="text-foreground mt-5 max-w-xl text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+              Reviews reais de quem já confiou no nosso trabalho
+            </h2>
+
+            <p className="text-muted-foreground mt-4 max-w-xl text-base leading-relaxed sm:text-lg">
+              A adequação é feita pela equipa WPexperts.pt, com histórico público em WordPress, WooCommerce e projetos
+              para clientes reais.
+            </p>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+              {proofStats.map((stat) => (
+                <div key={stat.label} className="bg-card rounded-2xl border p-5 shadow-sm">
+                  <div className="text-foreground text-3xl font-semibold tracking-tight">{stat.value}</div>
+                  <div className="text-foreground mt-2 text-sm font-medium">{stat.label}</div>
+                  <div className="text-muted-foreground mt-1 text-xs leading-relaxed">{stat.detail}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-card mt-4 rounded-2xl border p-5 shadow-sm">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-foreground text-lg font-semibold">Google Business Profile</span>
+                    <RatingStars />
+                  </div>
+                  <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                    5,0 de 5 com 34 avaliações. Reviews referentes ao trabalho da equipa responsável por esta
+                    instalação.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                <Button asChild className="rounded-sm">
+                  <a href={GOOGLE_BUSINESS_PROFILE_URL} target="_blank" rel="noopener noreferrer">
+                    Ver perfil no Google
+                    <ExternalLink className="size-4" aria-hidden="true" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="rounded-sm">
+                  <a href={WPEXPERTS_URL} target="_blank" rel="noopener noreferrer">
+                    Ver WPexperts.pt
+                    <ExternalLink className="size-4" aria-hidden="true" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="mb-4 flex items-center gap-3">
+              <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
+                <Video className="size-5" aria-hidden="true" />
+              </div>
+              <div>
+                <h3 className="text-foreground text-xl font-semibold tracking-tight">Reviews em vídeo</h3>
+                <p className="text-muted-foreground text-sm">Feedback de clientes da equipa WPexperts.pt.</p>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {videoReviews.map((review) => (
+                <article key={review.name} className="bg-card overflow-hidden rounded-2xl border shadow-sm">
+                  <div className="bg-secondary/40 relative aspect-[9/16] overflow-hidden">
+                    <video
+                      className="h-full w-full object-cover"
+                      controls
+                      playsInline
+                      preload="metadata"
+                      aria-label={`${review.label} de ${review.name}`}
+                    >
+                      <source src={review.src} type="video/mp4" />O seu navegador não suporta vídeo HTML5.
+                    </video>
+                  </div>
+                  <div className="flex items-center justify-between gap-3 p-4">
+                    <div>
+                      <h4 className="text-foreground font-semibold tracking-tight">{review.name}</h4>
+                      <p className="text-muted-foreground text-sm">{review.label}</p>
+                    </div>
+                    <PlayCircle className="text-primary size-6 shrink-0" aria-hidden="true" />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
