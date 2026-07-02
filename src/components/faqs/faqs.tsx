@@ -99,7 +99,7 @@ export function FAQs() {
           <AccordionTriggerFAQs>Quanto custa e há mensalidades?</AccordionTriggerFAQs>
           <AccordionContentFAQs>
             <p>
-              É um investimento único de 100€, valor fixo e sem mensalidades. Inclui integração
+              É um investimento único de 50€, valor fixo e sem mensalidades. Inclui integração
               completa, testes ao vivo, fluxo de e-mail configurado e suporte pós-venda em 24h.
             </p>
           </AccordionContentFAQs>

@@ -7,12 +7,13 @@ import { RiskSection } from "@/components/risk/risk-section";
 import PricingTiers, { Plan } from "@/components/ruixen/pricing-tiers";
 import { Testimonials } from "@/components/testimonials/testimonials";
 import { WhatsAppFloat } from "@/components/whatsapp/whatsapp-float";
+import { STRIPE_CHECKOUT_URL, PRICE_EUR } from "@/lib/site";
 
 const plan: Plan[] = [
   {
     title: "Instalação Completa",
-    monthlyPrice: 100,
-    annualPrice: 100,
+    monthlyPrice: PRICE_EUR,
+    annualPrice: PRICE_EUR,
     description: "Valor fixo, sem mensalidades. A sua loja em conformidade.",
     badge: "Oferta Limitada",
     features: [
@@ -39,7 +40,7 @@ export default function Home() {
         <Testimonials />
       </div>
       <div id="preco" className="scroll-mt-20">
-        <PricingTiers plans={plan} />
+        <PricingTiers plans={plan} ctaHref={STRIPE_CHECKOUT_URL} ctaLabel="Adequar Agora por 50€" />
       </div>
       <div id="faq" className="scroll-mt-20">
         <FAQs />

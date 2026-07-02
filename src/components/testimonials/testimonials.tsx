@@ -22,7 +22,7 @@ const testimonials = [
     name: "Sofia Antunes",
     date: "Cosmética natural",
     title: "Preço justo e transparente",
-    content: `"100€ fixos, sem mensalidades nem surpresas. Recebi o e-mail de confirmação legal a funcionar e testámos tudo ao vivo. Recomendo a qualquer e-commerce."`,
+    content: `"50€ fixos, sem mensalidades nem surpresas. Recebi o e-mail de confirmação legal a funcionar e testámos tudo ao vivo. Recomendo a qualquer e-commerce."`,
     rating: 5,
   },
   {

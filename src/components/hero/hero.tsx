@@ -3,6 +3,7 @@ import { BackgroundBlur } from "@/components/ui/background-blur";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Clock, ListChecks, Mail } from "lucide-react";
 import Link from "next/link";
+import { STRIPE_CHECKOUT_URL } from "@/lib/site";
 
 const trustBadges = [
   { icon: Clock, label: "Instalação em 24h" },
@@ -33,7 +34,9 @@ export function Hero() {
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <Button className="w-fit rounded-sm" size="lg" asChild>
-            <Link href="#formulario">Adequar Agora por 100€</Link>
+            <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+              Adequar Agora por 50€
+            </a>
           </Button>
           <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">
             <Link href="#preco">Ver o que está incluído</Link>
