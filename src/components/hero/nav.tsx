@@ -47,32 +47,23 @@ export function Nav() {
   }
 
   return (
-    <header>
+    <header className="relative z-30">
       <nav
-        data-state={menuState && 'active'}
-        className="fixed left-1/2 top-0 z-20 w-full -translate-x-1/2 px-2"
+        data-state={menuState ? 'active' : 'inactive'}
+        className="fixed left-1/2 top-0 z-30 w-full -translate-x-1/2 px-4 sm:px-6 lg:px-2"
       >
         <div
           className={cn(
-            'mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 ease-out lg:px-12',
-            isScrolled &&
-              'max-w-4xl rounded-3xl border bg-background/60 backdrop-blur-2xl lg:px-5'
+            'mx-auto mt-3 max-w-6xl rounded-[1.25rem] px-4 transition-all duration-300 ease-out sm:px-6 lg:px-12',
+            (isScrolled || menuState) &&
+              'border bg-background/80 shadow-sm shadow-zinc-300/20 backdrop-blur-2xl',
+            isScrolled && 'lg:max-w-4xl lg:px-5'
           )}
         >
-          <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+          <div className="relative flex items-center justify-between py-3 lg:py-4">
             {/* Left: Logo */}
-            <div className="flex w-full justify-between lg:w-auto">
+            <div className="flex shrink-0">
               <Logo />
-
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState ? 'Fechar Menu' : 'Abrir Menu'}
-                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden"
-              >
-                <Menu className="m-auto size-6 duration-200 in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0" />
-                <X className="absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100" />
-              </button>
             </div>
 
             {/* Center: Desktop menu */}
@@ -92,33 +83,52 @@ export function Nav() {
               </ul>
             </div>
 
-            {/* Right: Actions + Mobile menu */}
-            <div className="mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border bg-background p-6 shadow-2xl shadow-zinc-300/20 in-data-[state=active]:flex md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none">
-              {/* Mobile menu items */}
-              <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        onClick={(e) => handleNavClick(e, item.href)}
-                        className="block text-muted-foreground duration-150 hover:text-accent-foreground"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Right: Desktop action */}
+            <div className="hidden lg:flex lg:w-fit lg:items-center lg:justify-end">
+              <Button asChild size="sm">
+                <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                  Adequar Loja
+                </a>
+              </Button>
+            </div>
 
-              {/* Button */}
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:items-center sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild size="sm">
-                  <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-                    Adequar Loja
-                  </a>
-                </Button>
-              </div>
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMenuState(!menuState)}
+              aria-expanded={menuState}
+              aria-label={menuState ? 'Fechar Menu' : 'Abrir Menu'}
+              className="relative z-20 inline-flex size-10 cursor-pointer items-center justify-center rounded-full text-foreground transition-colors hover:bg-secondary lg:hidden"
+            >
+              <Menu className="m-auto size-6 duration-200 in-data-[state=active]:rotate-180 in-data-[state=active]:scale-0 in-data-[state=active]:opacity-0" />
+              <X className="absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200 in-data-[state=active]:rotate-0 in-data-[state=active]:scale-100 in-data-[state=active]:opacity-100" />
+            </button>
+
+            {/* Mobile menu panel */}
+            <div
+              className={cn(
+                'absolute left-0 right-0 top-[calc(100%+0.75rem)] hidden rounded-2xl border bg-background p-3 shadow-2xl shadow-zinc-300/30 lg:hidden dark:shadow-none',
+                menuState && 'block'
+              )}
+            >
+              <ul className="grid gap-1 text-base font-medium">
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.href}
+                      onClick={(e) => handleNavClick(e, item.href)}
+                      className="block rounded-xl px-4 py-3 text-center text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <Button asChild size="sm" className="mt-3 h-10 w-full rounded-xl">
+                <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                  Adequar Loja
+                </a>
+              </Button>
             </div>
           </div>
         </div>

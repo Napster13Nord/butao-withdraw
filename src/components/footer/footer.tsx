@@ -82,11 +82,7 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 flex flex-col items-center gap-4 border-t pt-8 md:flex-row md:justify-between">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a
-            Diretiva Europeia (UE) 2023/2673.
-          </p>
+        <div className="mt-12 flex flex-col items-center gap-4 border-t pt-8 text-center md:flex-row md:justify-between md:text-left">
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="/privacidade" className="hover:text-foreground">
               Privacidade
@@ -105,6 +101,10 @@ export function Footer() {
             >
               WPexperts.pt
             </a>
+          </p>
+          <p className="max-w-md text-sm text-muted-foreground md:text-right">
+            © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a
+            Diretiva Europeia (UE) 2023/2673.
           </p>
         </div>
       </div>
