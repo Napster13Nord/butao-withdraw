@@ -1,9 +1,10 @@
-const WHATSAPP_NUMBER = "3584578337530";
+import { whatsappLink } from "@/lib/site";
+
 const WHATSAPP_MESSAGE =
   "Olá! Gostaria de adequar a minha loja WooCommerce ao Botão de Arrependimento.";
 
 export function WhatsAppFloat() {
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  const href = whatsappLink(WHATSAPP_MESSAGE);
 
   return (
     <a
