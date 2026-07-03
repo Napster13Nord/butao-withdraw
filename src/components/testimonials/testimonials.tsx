@@ -139,22 +139,8 @@ export function Testimonials() {
               </div>
             </article>
 
-            <article className="bg-card mt-5 grid gap-5 rounded-2xl border p-4 shadow-sm sm:grid-cols-[minmax(0,1fr)_minmax(250px,300px)] sm:items-center">
-              <div className="flex h-full flex-col justify-between gap-5 p-1">
-                <div className="flex items-start gap-3">
-                  <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
-                    <PlayCircle className="size-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-foreground text-xl font-semibold tracking-tight">
-                      Review em vídeo da {videoReview.name}
-                    </h3>
-                  </div>
-                </div>
-                <span className="text-muted-foreground text-xs font-medium">Cliente WPexperts.pt</span>
-              </div>
-
-              <div className="bg-secondary/40 mx-auto aspect-[9/16] w-full max-w-[285px] overflow-hidden rounded-xl sm:max-w-none">
+            <article className="bg-card mt-5 overflow-hidden rounded-2xl border shadow-sm sm:grid sm:grid-cols-[minmax(190px,235px)_1fr]">
+              <div className="bg-secondary/40 relative mx-auto aspect-[9/16] w-full max-w-[270px] overflow-hidden sm:mx-0 sm:max-w-none">
                 <video
                   className="h-full w-full object-cover"
                   controls
@@ -164,6 +150,35 @@ export function Testimonials() {
                 >
                   <source src={videoReview.src} type="video/mp4" />O seu navegador não suporta vídeo HTML5.
                 </video>
+              </div>
+
+              <div className="flex flex-col justify-between gap-6 p-5 sm:p-6">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-secondary text-primary flex size-10 shrink-0 items-center justify-center rounded-xl">
+                      <PlayCircle className="size-5" aria-hidden="true" />
+                    </div>
+                    <span className="text-muted-foreground text-sm font-medium">{videoReview.label}</span>
+                  </div>
+
+                  <h3 className="text-foreground mt-5 text-2xl font-semibold tracking-tight">
+                    Review da {videoReview.name}
+                  </h3>
+                  <p className="text-muted-foreground mt-3 text-sm leading-relaxed sm:text-base">
+                    Um depoimento curto, gravado por uma cliente real, para mostrar a confiança por trás do serviço.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="border-t pt-3">
+                    <span className="text-foreground block font-semibold">0:42</span>
+                    <span className="text-muted-foreground text-xs">Duração do review</span>
+                  </div>
+                  <div className="border-t pt-3">
+                    <span className="text-foreground block font-semibold">Irinas B</span>
+                    <span className="text-muted-foreground text-xs">Cliente verificada</span>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
