@@ -77,30 +77,32 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="mt-12 flex flex-col items-center gap-4 border-t pt-8 text-center md:flex-row md:justify-between md:text-left">
-          <div className="text-muted-foreground flex items-center gap-4 text-sm">
-            <Link href="/privacidade" className="hover:text-foreground">
-              Privacidade
-            </Link>
-            <Link href="/termos" className="hover:text-foreground">
-              Termos
-            </Link>
+        <div className="mt-12 border-t pt-8">
+          <div className="text-muted-foreground grid gap-5 text-center text-sm md:grid-cols-[1fr_auto_1fr] md:items-center">
+            <div className="flex items-center justify-center gap-5 md:justify-start">
+              <Link href="/privacidade" className="hover:text-foreground">
+                Privacidade
+              </Link>
+              <Link href="/termos" className="hover:text-foreground">
+                Termos
+              </Link>
+            </div>
+            <p>
+              Concebido por{" "}
+              <a
+                href="https://wpexperts.pt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground underline underline-offset-2"
+              >
+                WPexperts.pt
+              </a>
+            </p>
+            <p className="mx-auto max-w-sm leading-relaxed md:mx-0 md:justify-self-end md:text-right">
+              © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a Diretiva Europeia (UE)
+              2023/2673.
+            </p>
           </div>
-          <p className="text-muted-foreground text-sm">
-            Concebido por{" "}
-            <a
-              href="https://wpexperts.pt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-foreground underline underline-offset-2"
-            >
-              WPexperts.pt
-            </a>
-          </p>
-          <p className="text-muted-foreground max-w-md text-sm md:text-right">
-            © {new Date().getFullYear()} Adequação Digital. Desenvolvido em conformidade com a Diretiva Europeia (UE)
-            2023/2673.
-          </p>
         </div>
       </div>
     </footer>
