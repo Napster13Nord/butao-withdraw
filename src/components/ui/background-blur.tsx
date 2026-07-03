@@ -7,11 +7,25 @@ type Props = {
 
 export function BackgroundBlur({ className }: Props) {
   return (
-    <div
+    <picture
       className={cn(
-        "pointer-events-none absolute top-0 left-0 -z-10 h-full w-full bg-[url('/background-blur-mobile.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/background-blur-desktop.webp')]",
+        "pointer-events-none absolute top-0 left-0 -z-10 block h-full w-full",
         className,
       )}
-    />
+    >
+      <source
+        srcSet="/background-blur-desktop.webp"
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <img
+        src="/background-blur-mobile.webp"
+        alt=""
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+        className="block h-full w-full object-cover object-center"
+      />
+    </picture>
   );
 }

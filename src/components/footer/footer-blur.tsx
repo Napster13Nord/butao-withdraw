@@ -7,11 +7,24 @@ type Props = {
 
 export function FooterBlur({ className }: Props) {
   return (
-    <div
+    <picture
       className={cn(
-        "pointer-events-none absolute bottom-0 left-0 -z-10 h-full w-full bg-[url('/footer-blur-mobile.png')] mask-t-from-90% bg-cover bg-center bg-no-repeat md:bg-[url('/footer-blur-desktop.webp')]",
+        "pointer-events-none absolute bottom-0 left-0 -z-10 block h-full w-full mask-t-from-90%",
         className,
       )}
-    />
+    >
+      <source
+        srcSet="/footer-blur-desktop.webp"
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <img
+        src="/footer-blur-mobile.webp"
+        alt=""
+        loading="lazy"
+        decoding="async"
+        className="block h-full w-full object-cover object-center"
+      />
+    </picture>
   );
 }

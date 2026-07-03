@@ -20,7 +20,7 @@ const menuItems = [
 function Logo() {
   return (
     <Link href="/" aria-label="Adequação Digital">
-      <Image src="/logo.svg" alt="Adequação Digital" width={140} height={40} priority />
+      <Image src="/logo.webp" alt="Adequação Digital" width={140} height={31} priority />
     </Link>
   );
 }
