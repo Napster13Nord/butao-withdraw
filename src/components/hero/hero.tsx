@@ -1,9 +1,9 @@
 import { Nav } from "@/components/hero/nav";
 import { BackgroundBlur } from "@/components/ui/background-blur";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Clock, ListChecks } from "lucide-react";
+import { ShieldCheck, Clock, ListChecks, Star } from "lucide-react";
 import Link from "next/link";
-import { STRIPE_CHECKOUT_URL } from "@/lib/site";
+import { GOOGLE_BUSINESS_PROFILE_URL, STRIPE_CHECKOUT_URL } from "@/lib/site";
 
 const trustBadges = [
   { icon: Clock, label: "Entrega em 24h" },
@@ -38,15 +38,33 @@ export function Hero() {
           sua loja pronta sem parar as vendas.
         </p>
 
-        <div className="flex flex-col items-center gap-3 sm:flex-row">
-          <Button className="w-fit rounded-sm" size="lg" asChild>
-            <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-              Instalar agora por 75€
-            </a>
-          </Button>
-          <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">
-            <Link href="#preco">Ver garantia e entregáveis</Link>
-          </Button>
+        <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-3 sm:flex-row">
+            <Button className="w-fit rounded-sm" size="lg" asChild>
+              <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
+                Instalar agora por 75€
+              </a>
+            </Button>
+            <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">
+              <Link href="#preco">Ver garantia e entregáveis</Link>
+            </Button>
+          </div>
+
+          <a
+            href={GOOGLE_BUSINESS_PROFILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-secondary/55 hover:bg-secondary/75 inline-flex w-full max-w-[21.5rem] flex-col items-center justify-center gap-2 rounded-2xl border px-4 py-3 text-center text-sm shadow-sm backdrop-blur transition-colors sm:w-auto sm:max-w-none sm:flex-row sm:rounded-full sm:px-5 sm:py-2"
+            aria-label="Google Business Profile: 5,0 de 5 com 34 avaliações"
+          >
+            <span className="text-foreground font-semibold">Google Business Profile</span>
+            <span className="flex items-center gap-1" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Star key={index} className="size-3.5 fill-yellow-400 text-yellow-400" />
+              ))}
+            </span>
+            <span className="text-muted-foreground whitespace-nowrap">5,0/5 · 34 avaliações</span>
+          </a>
         </div>
 
         {/* Trust badges */}
