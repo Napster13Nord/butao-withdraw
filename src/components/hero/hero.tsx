@@ -42,7 +42,7 @@ export function Hero() {
           <div className="flex flex-col items-center gap-3 sm:flex-row">
             <Button className="w-fit rounded-sm" size="lg" asChild>
               <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-                Instalar agora por 75€
+                Adequar agora por 75€
               </a>
             </Button>
             <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">
