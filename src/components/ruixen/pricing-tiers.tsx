@@ -161,7 +161,7 @@ export default function PricingTiers({
     <section className="py-16 md:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl space-y-6 text-center">
-          <h1 className="text-4xl font-semibold lg:text-5xl">{heading}</h1>
+          <h2 className="text-4xl font-semibold lg:text-5xl">{heading}</h2>
           <Description>{subheading}</Description>
 
           {/* Billing toggle — only when there are recurring plans */}
