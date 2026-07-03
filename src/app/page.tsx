@@ -12,17 +12,18 @@ import { STRIPE_CHECKOUT_URL, PRICE_EUR } from "@/lib/site";
 
 const plan: Plan[] = [
   {
-    title: "Instalação Completa",
+    title: "Adequação WooCommerce",
     monthlyPrice: PRICE_EUR,
     annualPrice: PRICE_EUR,
-    description: "Valor fixo, sem mensalidades. A sua loja em conformidade.",
-    badge: "Oferta Limitada",
+    description: "Pagamento único. Entrega em 24h após recebermos os acessos da loja.",
+    badge: "Garantia incluída",
     features: [
-      "Integração técnica completa",
-      "Testes ao vivo na sua loja",
-      "Fluxo de e-mail legal configurado",
-      "Botão em 2 passos exigidos por lei",
-      "Suporte pós-venda em 24h",
+      "Botão de Arrependimento visível na loja",
+      "Fluxo de Livre Resolução em 2 passos",
+      "Página/formulário ligado ao pedido do cliente",
+      "E-mail legal de confirmação automático",
+      "Testes ao vivo antes da entrega",
+      "Ajustes sem custo se algo não ficar correto",
     ],
   },
 ];
@@ -44,7 +45,13 @@ export default function Home() {
         <Testimonials />
       </div>
       <div id="preco" className="scroll-mt-20">
-        <PricingTiers plans={plan} ctaHref={STRIPE_CHECKOUT_URL} ctaLabel="Adequar Agora por 75€" />
+        <PricingTiers
+          plans={plan}
+          heading="Loja adequada em 24h, sem mensalidades"
+          subheading="Por 75€, recebe botão, formulário, fluxo em 2 passos, e-mail automático, testes ao vivo e garantia de ajuste."
+          ctaHref={STRIPE_CHECKOUT_URL}
+          ctaLabel="Adequar loja por 75€"
+        />
       </div>
       <div id="faq" className="scroll-mt-20">
         <FAQs />

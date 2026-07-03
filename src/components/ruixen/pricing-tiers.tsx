@@ -249,12 +249,22 @@ export default function PricingTiers({
                   <Separator>Incluído</Separator>
                   <List>
                     {plan.features.map((feature, i) => (
-                      <ListItem key={i} className="flex items-center gap-2">
-                        <Check className="size-4 text-foreground" />
+                      <ListItem key={i} className="flex items-start gap-2">
+                        <Check className="mt-0.5 size-4 shrink-0 text-foreground" />
                         {feature}
                       </ListItem>
                     ))}
                   </List>
+
+                  {isSingle && (
+                    <div className="rounded-lg border bg-secondary/40 p-4">
+                      <p className="text-foreground text-sm font-semibold">Prazo e garantia</p>
+                      <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
+                        Entregamos em 24h após recebermos os acessos. Se algum item incluído não ficar operacional,
+                        corrigimos sem custo.
+                      </p>
+                    </div>
+                  )}
                 </Body>
               </Card>
             );
