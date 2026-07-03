@@ -20,6 +20,9 @@ export type DottedMapBackgroundProps = React.HTMLAttributes<HTMLDivElement> & {
   pins?: DottedMapPin[];
 };
 
+type MapPoint = ReturnType<DottedMap["getPoints"]>[number];
+type PinPoint = MapPoint & { color: string; radius: number };
+
 export function DottedMapBackground({
   height = 55,
   grid = "diagonal",
@@ -40,14 +43,18 @@ export function DottedMapBackground({
   const pinPoints = React.useMemo(() => {
     if (!pins.length) return [];
     const map = new DottedMap({ height, grid: dottedGrid });
-    return pins.map((pin) => {
-      const point = map.getPoints().find((p) => {
+    const mapPoints = map.getPoints();
+
+    return pins.map<PinPoint | null>((pin) => {
+      const point = mapPoints.find((p) => {
+        if (p.lat == null || p.lng == null) return false;
+
         const latDiff = Math.abs(p.lat - pin.lat);
         const lngDiff = Math.abs(p.lng - pin.lng);
         return latDiff < 5 && lngDiff < 5;
       });
       return point ? { ...point, color: pin.color ?? "#22c55e", radius: pin.radius ?? 0.45 } : null;
-    }).filter(Boolean);
+    }).filter((point): point is PinPoint => point !== null);
   }, [height, dottedGrid, pins]);
 
   return (
@@ -70,7 +77,7 @@ export function DottedMapBackground({
             fill={dotColor}
           />
         ))}
-        {pinPoints.map((pin, index) => pin && (
+        {pinPoints.map((pin, index) => (
           <circle
             key={`pin-${index}`}
             cx={pin.x}
