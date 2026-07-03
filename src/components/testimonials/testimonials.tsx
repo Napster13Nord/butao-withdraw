@@ -140,7 +140,7 @@ export function Testimonials() {
             </article>
 
             <article className="bg-card mt-5 overflow-hidden rounded-2xl border shadow-sm sm:grid sm:grid-cols-[minmax(190px,235px)_1fr]">
-              <div className="bg-secondary/40 relative mx-auto aspect-[9/16] w-full max-w-[270px] overflow-hidden sm:mx-0 sm:max-w-none">
+              <div className="bg-secondary/40 relative aspect-[9/16] w-full overflow-hidden sm:max-w-none">
                 <video
                   className="h-full w-full object-cover"
                   controls
