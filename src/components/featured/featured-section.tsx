@@ -17,7 +17,7 @@ export function FeaturedSection({
   items = defaultFeaturedItems,
   className,
   title = "Solução técnica, rápida e completa",
-  subtitle = "Não perde tempo com relatórios jurídicos. Nós tratamos de toda a integração técnica na sua loja WooCommerce, do botão ao e-mail legal.",
+  subtitle = "Não perde tempo com relatórios jurídicos nem com instalação, tradução e configuração de plugins. Nós tratamos de toda a integração técnica na sua loja WooCommerce, do botão ao e-mail legal.",
 }: FeaturedSectionProps) {
   return (
     <section className={cn("relative py-16 sm:py-24", className)}>
