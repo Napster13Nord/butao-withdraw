@@ -52,7 +52,7 @@ export function HowItWorksSection() {
               <div className="divide-y">
                 {steps.map(({ iconSrc, iconAlt, title, description }) => (
                   <article key={title} className="flex gap-4 p-6 sm:p-8">
-                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary/70">
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-full bg-secondary/70">
                       <img src={iconSrc} alt={iconAlt} className="size-10 object-contain" />
                     </div>
                     <div>
