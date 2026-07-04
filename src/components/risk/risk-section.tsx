@@ -1,5 +1,71 @@
 import { Reveal } from "@/components/ui/reveal";
-import { ShieldAlert, CalendarClock, ArrowRight } from "lucide-react";
+import { FeatureGrid, type Feature } from "@/components/ui/feature-grid";
+import { CalendarClock, FileWarning, Radar, ShieldAlert } from "lucide-react";
+
+const riskFeatures: Feature[] = [
+  {
+    icon: ShieldAlert,
+    iconLabel: "Alerta de coima",
+    eyebrow: "Coimas",
+    title: (
+      <>
+        Multas de até <span className="text-destructive">4%</span> do volume de negócios
+      </>
+    ),
+    description: (
+      <>
+        A sanção pode chegar a <strong className="text-foreground">4% do volume anual</strong> ou a{" "}
+        <strong className="text-foreground">2 milhões de euros</strong>, consoante o valor mais elevado.
+      </>
+    ),
+    stat: "até €2.000.000",
+    href: "#preco",
+    ctaLabel: "Ver solução para reduzir risco de coimas",
+  },
+  {
+    icon: CalendarClock,
+    iconLabel: "Prazo de devolução",
+    eyebrow: "Prazo alargado",
+    title: (
+      <>
+        Devolução salta de <span className="text-destructive">14 dias</span> para{" "}
+        <span className="text-destructive">1 ano</span>
+      </>
+    ),
+    description: (
+      <>
+        Sem o botão obrigatório, o prazo de livre resolução pode passar automaticamente de{" "}
+        <strong className="text-foreground">14 dias</strong> para{" "}
+        <strong className="text-foreground">1 ano e 14 dias</strong>.
+      </>
+    ),
+    stat: "1 ano + 14 dias",
+    href: "#faq",
+    ctaLabel: "Ler dúvidas sobre o prazo de devolução",
+  },
+  {
+    icon: Radar,
+    iconLabel: "Fiscalização automática",
+    eyebrow: "Web sweeps",
+    title: "A fiscalização não depende de uma denúncia manual",
+    description:
+      "Autoridades europeias usam varreduras automatizadas para encontrar lojas com fluxos de devolução incompletos ou difíceis de aceder.",
+    stat: "deteção automática",
+    href: "#solucao",
+    ctaLabel: "Ver como a solução resolve a fiscalização automática",
+  },
+  {
+    icon: FileWarning,
+    iconLabel: "Falha documental",
+    eyebrow: "Prova legal",
+    title: "Sem registo claro, a loja fica mais frágil numa reclamação",
+    description:
+      "O fluxo deve gerar confirmação e e-mail legal, para que a loja consiga demonstrar que o pedido foi recebido e tratado corretamente.",
+    stat: "e-mail legal",
+    href: "#como-funciona",
+    ctaLabel: "Ver como funciona a instalação do fluxo legal",
+  },
+];
 
 export function RiskSection() {
   return (
@@ -20,62 +86,9 @@ export function RiskSection() {
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {/* Coimas */}
-          <Reveal from="up">
-            <article className="flex h-full flex-col rounded-2xl border bg-card p-8 shadow-sm">
-              <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-destructive/10 text-destructive">
-                <ShieldAlert className="size-6" />
-              </div>
-              <div className="text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
-                Coimas
-              </div>
-              <h3 className="mt-2 text-xl font-semibold tracking-tight">
-                Multas de até <span className="text-destructive">4%</span> do volume de negócios
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Multas de até <strong className="text-foreground">4% do volume de negócios anual</strong> ou
-                até <strong className="text-foreground">2 milhões de euros</strong>, consoante o que for mais elevado.
-              </p>
-              <div className="mt-auto pt-6">
-                <div className="text-3xl font-bold tracking-tight text-destructive">até €2.000.000</div>
-              </div>
-            </article>
-          </Reveal>
-
-          {/* Devolução */}
-          <Reveal from="up" delayMs={100}>
-            <article className="flex h-full flex-col rounded-2xl border bg-card p-8 shadow-sm">
-              <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-destructive/10 text-destructive">
-                <CalendarClock className="size-6" />
-              </div>
-              <div className="text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
-                Punição automática
-              </div>
-              <h3 className="mt-2 text-xl font-semibold tracking-tight">
-                Devolução salta de <span className="text-destructive">14 dias</span> para{" "}
-                <span className="text-destructive">1 ano</span>
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                O direito do cliente devolver o produto salta automaticamente de{" "}
-                <strong className="text-foreground">14 dias</strong> para{" "}
-                <strong className="text-foreground">1 ano e 14 dias</strong> se o botão não existir.
-              </p>
-              <div className="mt-auto flex items-center gap-4 pt-6">
-                <div className="rounded-lg border bg-background px-4 py-3 text-center">
-                  <div className="text-[11px] text-muted-foreground">Com botão</div>
-                  <div className="text-sm font-semibold">14 dias</div>
-                </div>
-                <ArrowRight className="size-4 shrink-0 text-muted-foreground" />
-                <div className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-center">
-                  <div className="text-[11px] text-muted-foreground">Sem botão</div>
-                  <div className="text-sm font-semibold text-destructive">1 ano + 14 dias</div>
-                </div>
-              </div>
-            </article>
-          </Reveal>
-        </div>
+        <Reveal from="up">
+          <FeatureGrid features={riskFeatures} />
+        </Reveal>
       </div>
     </section>
   );
