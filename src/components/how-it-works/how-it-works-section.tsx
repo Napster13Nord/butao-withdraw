@@ -1,21 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { STRIPE_CHECKOUT_URL } from "@/lib/site";
-import { CreditCard, ShieldCheck, UserRoundPlus, Wrench } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 const steps = [
   {
-    icon: CreditCard,
+    iconSrc: "/icons/pagamento-icon.webp",
+    iconAlt: "Ícone de pagamento com símbolo de euro",
     title: "Paga a instalação",
     description: "Finaliza o pagamento seguro de 75€ e recebe as próximas instruções no e-mail.",
   },
   {
-    icon: UserRoundPlus,
+    iconSrc: "/icons/account-icon.webp",
+    iconAlt: "Ícone de utilizador com símbolo de adicionar",
     title: "Cria um acesso temporário",
     description: "Segue o guia para criar um utilizador temporário no WooCommerce, apenas para esta configuração.",
   },
   {
-    icon: Wrench,
+    iconSrc: "/icons/setup-icon.webp",
+    iconAlt: "Ícone de ferramenta com confirmação",
     title: "Nós configuramos e testamos",
     description: "Configuramos o botão, o fluxo em 2 passos e o e-mail legal. Depois validamos tudo ao vivo.",
   },
@@ -47,10 +50,10 @@ export function HowItWorksSection() {
               </div>
 
               <div className="divide-y">
-                {steps.map(({ icon: Icon, title, description }) => (
+                {steps.map(({ iconSrc, iconAlt, title, description }) => (
                   <article key={title} className="flex gap-4 p-6 sm:p-8">
-                    <div className="bg-secondary text-primary flex size-11 shrink-0 items-center justify-center rounded-xl">
-                      <Icon className="size-5" />
+                    <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary/70">
+                      <img src={iconSrc} alt={iconAlt} className="size-10 object-contain" />
                     </div>
                     <div>
                       <h3 className="text-foreground text-lg font-semibold tracking-tight">{title}</h3>
