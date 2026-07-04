@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { FeatureGrid, type Feature } from "@/components/ui/feature-grid";
-import { CalendarClock, FileWarning, Radar, ShieldAlert } from "lucide-react";
+import { CalendarClock, ShieldAlert } from "lucide-react";
 
 const riskFeatures: Feature[] = [
   {
@@ -19,8 +19,6 @@ const riskFeatures: Feature[] = [
       </>
     ),
     stat: "até €2.000.000",
-    href: "#preco",
-    ctaLabel: "Ver solução para reduzir risco de coimas",
   },
   {
     icon: CalendarClock,
@@ -40,30 +38,6 @@ const riskFeatures: Feature[] = [
       </>
     ),
     stat: "1 ano + 14 dias",
-    href: "#faq",
-    ctaLabel: "Ler dúvidas sobre o prazo de devolução",
-  },
-  {
-    icon: Radar,
-    iconLabel: "Fiscalização automática",
-    eyebrow: "Web sweeps",
-    title: "A fiscalização não depende de uma denúncia manual",
-    description:
-      "Autoridades europeias usam varreduras automatizadas para encontrar lojas com fluxos de devolução incompletos ou difíceis de aceder.",
-    stat: "deteção automática",
-    href: "#solucao",
-    ctaLabel: "Ver como a solução resolve a fiscalização automática",
-  },
-  {
-    icon: FileWarning,
-    iconLabel: "Falha documental",
-    eyebrow: "Prova legal",
-    title: "Sem registo claro, a loja fica mais frágil numa reclamação",
-    description:
-      "O fluxo deve gerar confirmação e e-mail legal, para que a loja consiga demonstrar que o pedido foi recebido e tratado corretamente.",
-    stat: "e-mail legal",
-    href: "#como-funciona",
-    ctaLabel: "Ver como funciona a instalação do fluxo legal",
   },
 ];
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ArrowRight, type LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -9,9 +9,7 @@ export interface Feature {
   eyebrow: string;
   title: React.ReactNode;
   description: React.ReactNode;
-  href: string;
   stat?: React.ReactNode;
-  ctaLabel?: string;
 }
 
 export interface FeatureGridProps {
@@ -23,14 +21,11 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
   const Icon = feature.icon;
 
   return (
-    <a
-      href={feature.href}
-      aria-label={feature.ctaLabel ?? feature.eyebrow}
+    <article
       className={cn(
-        "group flex min-h-48 flex-col gap-5 rounded-xl border bg-card p-6 text-card-foreground shadow-sm",
+        "flex min-h-48 flex-col gap-5 rounded-xl border bg-card p-6 text-card-foreground shadow-sm",
         "transition-all duration-300 ease-out",
         "hover:-translate-y-1 hover:border-primary/30 hover:shadow-md",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         "sm:flex-row sm:items-start sm:gap-6",
       )}
     >
@@ -57,13 +52,9 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
           ) : (
             <span aria-hidden="true" />
           )}
-          <ArrowRight
-            className="size-5 shrink-0 text-muted-foreground transition duration-300 group-hover:translate-x-1 group-hover:text-primary"
-            aria-hidden="true"
-          />
         </div>
       </div>
-    </a>
+    </article>
   );
 };
 
