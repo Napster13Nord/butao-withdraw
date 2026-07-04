@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import Script from "next/script";
-import { GA_MEASUREMENT_ID } from "@/lib/site";
+import { GA_MEASUREMENT_ID, WPEXPERTS_URL } from "@/lib/site";
 import { CookieConsent } from "@/components/analytics/cookie-consent";
 import "./globals.css";
 
@@ -12,10 +12,40 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? WPEXPERTS_URL;
+const title = "Adequação Digital — Botão de Livre Resolução para E-commerce";
+const description =
+  "Instalamos o botão obrigatório de Livre Resolução (Arrependimento) na sua loja WooCommerce. Evite coimas até 2 milhões de euros. Entrega em 24h por 75€.";
+
 export const metadata: Metadata = {
-  title: "Adequação Digital — Botão de Livre Resolução para E-commerce",
-  description:
-    "Instalamos o botão obrigatório de Livre Resolução (Arrependimento) na sua loja WooCommerce. Evite coimas até 2 milhões de euros. Entrega em 24h por 75€.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "Adequação Digital",
+    locale: "pt_PT",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 746,
+        height: 746,
+        alt: "Documento com escudo de alerta e símbolo de euro",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
