@@ -1,11 +1,10 @@
 import { Reveal } from "@/components/ui/reveal";
 import { FeatureGrid, type Feature } from "@/components/ui/feature-grid";
-import { CalendarClock, ShieldAlert } from "lucide-react";
 
 const riskFeatures: Feature[] = [
   {
-    icon: ShieldAlert,
-    iconLabel: "Alerta de coima",
+    imageSrc: "/coima-icone.webp",
+    imageAlt: "Ícone de documento com escudo de alerta e símbolo de euro",
     eyebrow: "Coimas",
     title: (
       <>
@@ -18,11 +17,10 @@ const riskFeatures: Feature[] = [
         <strong className="text-foreground">2 milhões de euros</strong>, consoante o valor mais elevado.
       </>
     ),
-    stat: "até €2.000.000",
   },
   {
-    icon: CalendarClock,
-    iconLabel: "Prazo de devolução",
+    imageSrc: "/prazo-icone.webp",
+    imageAlt: "Ícone de calendário com relógio e seta de prazo",
     eyebrow: "Prazo alargado",
     title: (
       <>
@@ -37,7 +35,6 @@ const riskFeatures: Feature[] = [
         <strong className="text-foreground">1 ano e 14 dias</strong>.
       </>
     ),
-    stat: "1 ano + 14 dias",
   },
 ];
 

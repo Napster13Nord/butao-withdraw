@@ -1,15 +1,13 @@
 import * as React from "react";
-import type { LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 export interface Feature {
-  icon: LucideIcon;
-  iconLabel: string;
+  imageSrc: string;
+  imageAlt: string;
   eyebrow: string;
   title: React.ReactNode;
   description: React.ReactNode;
-  stat?: React.ReactNode;
 }
 
 export interface FeatureGridProps {
@@ -17,10 +15,7 @@ export interface FeatureGridProps {
   className?: string;
 }
 
-const FeatureCard = ({ feature }: { feature: Feature }) => {
-  const Icon = feature.icon;
-
-  return (
+const FeatureCard = ({ feature }: { feature: Feature }) => (
     <article
       className={cn(
         "flex min-h-48 flex-col gap-5 rounded-xl border bg-card p-6 text-card-foreground shadow-sm",
@@ -29,8 +24,8 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
         "sm:flex-row sm:items-start sm:gap-6",
       )}
     >
-      <div className="flex size-20 shrink-0 items-center justify-center rounded-2xl border border-destructive/15 bg-destructive/10 text-destructive sm:size-24">
-        <Icon aria-label={feature.iconLabel} className="size-9 stroke-[1.8] sm:size-10" />
+      <div className="flex size-20 shrink-0 items-center justify-center rounded-2xl border border-destructive/10 bg-white sm:size-24">
+        <img src={feature.imageSrc} alt={feature.imageAlt} className="size-16 object-contain sm:size-20" />
       </div>
 
       <div className="flex min-h-full flex-1 flex-col">
@@ -44,19 +39,10 @@ const FeatureCard = ({ feature }: { feature: Feature }) => {
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-4 pt-5">
-          {feature.stat ? (
-            <div className="text-xl font-semibold tracking-tight text-destructive sm:text-2xl">
-              {feature.stat}
-            </div>
-          ) : (
-            <span aria-hidden="true" />
-          )}
-        </div>
+        <div className="mt-auto pt-1" aria-hidden="true" />
       </div>
     </article>
-  );
-};
+);
 
 const FeatureGrid = React.forwardRef<HTMLDivElement, FeatureGridProps>(({ features, className }, ref) => {
   if (!features.length) {
