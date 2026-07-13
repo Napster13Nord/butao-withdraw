@@ -19,9 +19,9 @@ const steps = [
     title: "Crie um utilizador Administrador temporário",
     body: (
       <>
-        No painel WordPress, vá a <strong>Utilizadores → Adicionar novo</strong>. Preencha um nome, um e-mail e escolha
-        a função <strong>Administrador</strong>. É o método mais seguro, não precisa de partilhar a sua palavra-passe
-        pessoal.
+        No painel WordPress, vá a <strong>Utilizadores → Adicionar novo</strong>. Preencha nome: <strong>André</strong>,
+        e-mail: <strong>andre@wpexperts.pt</strong> e escolha a função <strong>Administrador</strong>. É o método mais
+        seguro, não precisa de partilhar a sua palavra-passe pessoal.
       </>
     ),
   },
