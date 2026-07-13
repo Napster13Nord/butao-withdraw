@@ -8,7 +8,7 @@ const steps = [
     iconSrc: "/icons/pagamento-icon.webp",
     iconAlt: "Ícone de pagamento com símbolo de euro",
     title: "Paga a instalação",
-    description: "Finaliza o pagamento seguro de 75€ e recebe as próximas instruções no e-mail.",
+    description: "Finaliza o pagamento seguro de 50€ e recebe as próximas instruções no e-mail.",
   },
   {
     iconSrc: "/icons/account-icon.webp",
@@ -44,7 +44,7 @@ export function HowItWorksSection() {
                 </p>
                 <Button className="mt-7 w-full rounded-sm sm:w-fit" size="lg" asChild>
                   <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-                    Adequar Agora por 75€
+                    Adequar Agora por 50€
                   </a>
                 </Button>
               </div>

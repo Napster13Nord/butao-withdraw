@@ -7,7 +7,7 @@ import { GOOGLE_BUSINESS_PROFILE_URL, STRIPE_CHECKOUT_URL } from "@/lib/site";
 
 const trustBadges = [
   { icon: Clock, label: "Entrega em 24h" },
-  { icon: ListChecks, label: "Preço fechado: 75€" },
+  { icon: ListChecks, label: "Preço fechado: 50€" },
   { icon: ShieldCheck, label: "Garantia de ajuste" },
 ];
 
@@ -30,7 +30,7 @@ export function Hero() {
 
         <h1 className="max-w-4xl text-center text-4xl leading-[1.1] font-medium tracking-tight sm:text-6xl">
           Botão de Arrependimento obrigatório no WooCommerce,
-          <span className="text-muted-foreground block">instalado em 24h por 75€</span>
+          <span className="text-muted-foreground block">instalado em 24h por 50€</span>
         </h1>
 
         <p className="max-w-xl text-center leading-6 tracking-tight text-muted-foreground sm:text-xl">
@@ -42,7 +42,7 @@ export function Hero() {
           <div className="flex flex-col items-center gap-3 sm:flex-row">
             <Button className="w-fit rounded-sm" size="lg" asChild>
               <a href={STRIPE_CHECKOUT_URL} target="_blank" rel="noopener noreferrer">
-                Adequar agora por 75€
+                Adequar agora por 50€
               </a>
             </Button>
             <Button className="w-fit rounded-sm" size="lg" asChild variant="outline">

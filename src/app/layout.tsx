@@ -15,7 +15,7 @@ const inter = Inter({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? WPEXPERTS_URL;
 const title = "Adequação Digital — Botão de Livre Resolução para E-commerce";
 const description =
-  "Instalamos o botão obrigatório de Livre Resolução (Arrependimento) na sua loja WooCommerce. Evite coimas até 2 milhões de euros. Entrega em 24h por 75€.";
+  "Instalamos o botão obrigatório de Livre Resolução (Arrependimento) na sua loja WooCommerce. Evite coimas até 2 milhões de euros. Entrega em 24h por 50€.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

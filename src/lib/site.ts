@@ -1,6 +1,6 @@
 // Central place for external links / offer config.
 export const STRIPE_CHECKOUT_URL = "https://buy.stripe.com/6oU7sLeXS0Hm3q98Fw7N602";
-export const PRICE_EUR = 75;
+export const PRICE_EUR = 50;
 export const WPEXPERTS_URL = "https://wpexperts.pt/";
 export const GOOGLE_BUSINESS_PROFILE_URL = "https://share.google/acTxW1yGycQeFZMwd";
 export const IRINA_CASE_STUDY_URL = "https://irinasb.com/direito-de-livre-resolucao/";

@@ -48,9 +48,9 @@ export default function Home() {
         <PricingTiers
           plans={plan}
           heading="Loja adequada em 24h, sem mensalidades"
-          subheading="Por 75€, recebe botão, formulário, fluxo em 2 passos, e-mail automático, testes ao vivo e garantia de ajuste."
+          subheading="Por 50€, recebe botão, formulário, fluxo em 2 passos, e-mail automático, testes ao vivo e garantia de ajuste."
           ctaHref={STRIPE_CHECKOUT_URL}
-          ctaLabel="Adequar loja por 75€"
+          ctaLabel="Adequar loja por 50€"
         />
       </div>
       <div id="faq" className="scroll-mt-20">
